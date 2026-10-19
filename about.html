@@ -13,7 +13,6 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .font-cute { font-family: 'Fredoka', 'Noto Sans SC', sans-serif; }
         
-        /* Header & Nav */
         header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 2px solid #fef3c7; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
         .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
@@ -28,7 +27,6 @@
         .header-right { display: none; align-items: center; gap: 10px; }
         @media(min-width: 640px) { .header-right { display: flex; } }
         .btn-orange { background: linear-gradient(135deg, #f97316, #ea580c); color: white; padding: 10px 18px; border-radius: 16px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 12px rgba(249,115,22,0.3); display: inline-flex; align-items: center; gap: 6px; }
-        
         .mobile-menu-btn { display: block; background: none; border: 1px solid #cbd5e1; padding: 8px 12px; border-radius: 12px; font-size: 20px; cursor: pointer; }
         @media(min-width: 1000px) { .mobile-menu-btn { display: none; } }
         .mobile-drawer { display: none; background: white; border-bottom: 2px solid #e2e8f0; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
@@ -36,85 +34,35 @@
         .mobile-drawer a { display: block; padding: 10px 14px; color: #334155; text-decoration: none; font-weight: 700; border-radius: 8px; margin-bottom: 4px; font-size: 15px; }
 
         section { padding: 60px 0; }
-        
-        /* 大幅加大的创办历史标题标签 */
-        .badge-large {
-            display: inline-block;
-            padding: 10px 28px;
-            background: #fef08a;
-            color: #713f12;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 1.35rem;
-            letter-spacing: 0.8px;
-            margin-bottom: 16px;
-            box-shadow: 0 6px 16px rgba(254, 240, 138, 0.6);
-        }
-        
-        .intro-banner {
-            background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
-            border: 2px solid #bae6fd;
-            border-radius: 24px;
-            padding: 35px 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.02);
-            text-align: center;
-        }
-        .intro-banner p { font-size: 1.15rem; color: #0369a1; font-weight: 700; line-height: 1.8; margin-top: 10px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 40px; }
+        .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
+        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
 
-        /* Principal Quote Box */
-        .principal-box {
-            background: #ffffff;
-            border-left: 6px solid #f97316;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 50px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
-            border-top: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        /* Feature Cards Grid */
-        .card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-        @media(min-width: 768px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        /* Feature Cards */
+        .feature-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media(min-width: 768px) { .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         
         .feature-card {
             background: white;
-            padding: 28px;
-            border-radius: 20px;
+            border-radius: 24px;
             border: 2px solid #e2e8f0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            padding: 32px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
             transition: transform 0.2s;
         }
-        .feature-card:hover { transform: translateY(-4px); }
-        .card-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-        .feature-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
-        
-        /* 关键字标签云样式 */
-        .keyword-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
-        }
-        .tag {
-            background: #f8fafc;
-            border: 1.5px solid #cbd5e1;
-            color: #334155;
-            padding: 6px 14px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            font-weight: 700;
+        .feature-card:hover { transform: translateY(-4px); border-color: #38bdf8; }
+        .feature-icon { font-size: 2.2rem; margin-bottom: 16px; display: inline-block; }
+        .feature-title { font-size: 1.3rem; font-weight: 900; color: #0f172a; margin-bottom: 12px; }
+        .feature-desc { font-size: 0.95rem; color: #475569; line-height: 1.8; }
+
+        /* Teacher List */
+        .teacher-box {
+            background: white;
+            border-radius: 24px;
+            border: 2px solid #bae6fd;
+            padding: 35px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+            margin-top: 40px;
         }
 
         footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
@@ -123,7 +71,6 @@
 </head>
 <body>
 
-    <!-- 顶部导航 -->
     <header>
         <div class="container header-inner">
             <a href="index.html" class="logo-area">
@@ -163,108 +110,59 @@
 
     <section>
         <div class="container">
-            
-            <!-- 1. 创办历史背景 -->
-            <div class="intro-banner">
+            <div class="section-header">
+                <div class="badge">关于我们</div>
+                <!-- 已将字体加大至与主标题相同的大小 -->
                 <h2 class="font-cute" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; margin-bottom: 12px;">🌱 27 年陪伴成长</h2>
-                <p>
-                    种子学园于 1999 年创办，至今走过二十七年岁月。许多孩子在此留下宝贵的学习经历和美好的童年。
-                    种子是巴生最早推行开放教育及主题教学的幼儿园之一。
-                </p>
+                <p style="color: #64748b; font-weight: 700; margin-top: 8px;">种子学园 Tadika Tematik Ceria 深耕巴生 Klang 教育界 27 年，致力于提供最具温度的全人儿童教育</p>
             </div>
 
-            <!-- 2. 创办人何智强园长的话 -->
-            <div class="principal-box">
-                <div style="font-size: 12px; font-weight: 900; color: #ea580c; text-transform: uppercase; margin-bottom: 6px;">💬 创办人寄语</div>
-                <h2 class="font-cute" style="font-size: 1.35rem; color: #0f172a; margin-bottom: 12px;">种子学园创办人 何智强园长的话：</h2>
-                <p style="font-size: 1.05rem; color: #334155; font-weight: 600; line-height: 1.8; font-style: italic;">
-                    “种子学园致力于赋能每一位孩子，培养他们成为终身热爱学习、积极快乐的未来公民。我们引导孩子关怀社会与地球，共同守护人类与环境的健康，帮助他们活出自我价值，绽放精彩人生。”
-                </p>
-            </div>
-
-            <!-- 3. 办学特色矩阵 -->
-            <div style="text-align: center; margin-bottom: 35px;">
-                <div style="display:inline-block; padding: 6px 16px; background:#fef08a; color:#713f12; border-radius:50px; font-weight:800; font-size:13px; text-transform:uppercase; margin-bottom:12px;">办学特色</div>
-                <h2 class="font-cute" style="font-size: 2rem; color: #0f172a;">以儿童为本的启蒙与探究教育</h2>
-            </div>
-
-            <div class="card-grid">
+            <div class="feature-grid">
                 
-                <!-- 卡片 1：弹性着装和学习自主 -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #e0f2fe; color: #0284c7;">👕</div>
-                    <h3 class="font-cute">弹性着装和学习自主</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">上学服装自由选择</span>
-                        <span class="tag">充足游戏时间</span>
-                        <span class="tag">班级主题投票</span>
-                        <span class="tag">充分学习自主</span>
-                    </div>
+                    <span class="feature-icon">🔍</span>
+                    <h3 class="feature-title font-cute">主题方案教学 (PBL)</h3>
+                    <p class="feature-desc">打破传统死板填鸭，以孩子的生活经验为中心展开主题探究。让孩子动手做实验、做观察、做讨论，从探索中发现知识，激发终身学习的主动性。</p>
                 </div>
 
-                <!-- 卡片 2：多元化课程体系 (已加入新增要点) -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #d1fae5; color: #059669;">🧠</div>
-                    <h3 class="font-cute">多元化课程体系</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">脑科学规律</span>
-                        <span class="tag">全球幼教精髓</span>
-                        <span class="tag">紧贴KSPK纲要</span>
-                        <span class="tag">全面启发启蒙</span>
-                        <span class="tag">华国英三语教学</span>
-                        <span class="tag">均衡体能发展</span>
-                        <span class="tag">中华经典导读</span>
-                        <span class="tag">生活教育与人格培养</span>
-                        <span class="tag">幼小衔接课程(全日制)</span>
-                    </div>
+                    <span class="feature-icon">🗣️</span>
+                    <h3 class="feature-title font-cute">三语自然沉浸环境</h3>
+                    <p class="feature-desc">结合华语、国语（Bahasa Melayu）及英语三种语言的自然对话与互动教学，帮助孩子建构坚实的语言基础，轻松衔接小学课程。</p>
                 </div>
 
-                <!-- 卡片 3：PBL 主题专案教学 (已加入讨论与投票流程) -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #fef3c7; color: #d97706;">💡</div>
-                    <h3 class="font-cute">PBL 主题专案教学</h3>
-                    <p style="font-size: 0.93rem; color: #475569; font-weight: 600; line-height: 1.6; margin-bottom: 12px;">
-                        老师和孩子进行讨论，选出大家喜爱的主题，经过投票变成班上的主题课程，让孩子充分掌握学习自主。
-                    </p>
-                    <div class="keyword-tags">
-                        <span class="tag">探究式主题</span>
-                        <span class="tag">激发内在动力</span>
-                        <span class="tag">互动体验萌发</span>
-                        <span class="tag">探索充满乐趣</span>
-                    </div>
+                    <span class="feature-icon">❤️</span>
+                    <h3 class="feature-title font-cute">品德与人格塑造</h3>
+                    <p class="feature-desc">比起单纯的考试成绩，我们更关注孩子的品格、自信心与社交沟通能力。在爱与尊重的氛围中培养孩子的同理心与生活自理能力。</p>
                 </div>
 
-                <!-- 卡片 4：家园合作 (新增卡片) -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #fce7f3; color: #db2777;">🤝</div>
-                    <h3 class="font-cute">家园合作</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">亲子教养咨询</span>
-                        <span class="tag">年度亲子家庭日</span>
-                        <span class="tag">亲师一对一交流约谈</span>
-                        <span class="tag">家长教学参与</span>
-                    </div>
+                    <span class="feature-icon">🌿</span>
+                    <h3 class="feature-title font-cute">体验式户外学习</h3>
+                    <p class="feature-desc">定期安排安全的户外体验与感官拓展活动，让孩子走进大自然与社会，用眼看、用手摸、用心感觉，打造丰富精彩的童年记忆。</p>
                 </div>
 
+            </div>
+
+            <!-- 师资力量与团队 -->
+            <div class="teacher-box">
+                <h3 class="font-cute" style="font-size: 1.5rem; color: #0369a1; margin-bottom: 14px; text-align: center;">👩‍🏫 经验丰富的专业教职团队</h3>
+                <p style="font-size: 1rem; color: #334155; line-height: 1.8; text-align: center; max-width: 850px; margin: 0 auto 20px;">
+                    种子学园拥有一支充满爱心、耐心与专业素养的资深幼教团队。在何园长的引领下，每位老师都深谙儿童身心发展规律，陪伴孩子快乐成长。
+                </p>
+                <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 20px;">
+                    <span style="background: #f0fdf4; border: 1px solid #86efac; color: #166534; padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 14px;">🌱 黄汇莛 老师</span>
+                    <span style="background: #f0fdf4; border: 1px solid #86efac; color: #166534; padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 14px;">🌱 叶日红 老师</span>
+                    <span style="background: #f0fdf4; border: 1px solid #86efac; color: #166534; padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 14px;">🌱 郑寜欣 老师</span>
+                    <span style="background: #f0fdf4; border: 1px solid #86efac; color: #166534; padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 14px;">🌱 许雅惠 老师</span>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- 页脚 -->
     <footer>
         <div class="container">
-            <div style="display: flex; justify-content: center; margin-bottom: 16px;">
-                <div class="logo-circle" style="width: 44px; height: 44px;">
-                    <img src="logo.png" alt="Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
-                    <span style="display:none; font-size:20px;">🌱</span>
-                </div>
-            </div>
             <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
-            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p>培养信息化社会的开创

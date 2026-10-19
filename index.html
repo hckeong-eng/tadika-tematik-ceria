@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>种子学园 Tadika Tematik Ceria - 官方首页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans SC', 'Fredoka', sans-serif; background-color: var(--amber-bg); color: var(--slate-text); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .font-cute { font-family: 'Fredoka', 'Noto Sans SC', sans-serif; }
+        
+        /* Header & Nav */
+        header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 2px solid #fef3c7; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+        .logo-circle { width: 50px; height: 50px; border-radius: 50%; background: #ffffff; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid #34d399; overflow: hidden; flex-shrink: 0; }
+        .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+        
+        nav.desktop-nav { display: none; }
+        @media(min-width: 1000px) { nav.desktop-nav { display: flex; align-items: center; gap: 8px; } }
+        nav.desktop-nav a { padding: 8px 16px; border-radius: 12px; text-decoration: none; color: #334155; font-weight: 700; font-size: 15px; transition: all 0.2s; }
+        nav.desktop-nav a:hover, nav.desktop-nav a.active { background-color: #e0f2fe; color: #0284c7; }
+        
+        .header-right { display: none; align-items: center; gap: 10px; }
+        @media(min-width: 640px) { .header-right { display: flex; } }
+        .btn-orange { background: linear-gradient(135deg, #f97316, #ea580c); color: white; padding: 10px 18px; border-radius: 16px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 12px rgba(249,115,22,0.3); display: inline-flex; align-items: center; gap: 6px; }
+        .social-icon-btn { width: 38px; height: 38px; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-weight: bold; }
+        .bg-fb { background-color: #1877F2; }
+        .bg-ig { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+
+        .mobile-menu-btn { display: block; background: none; border: 1px solid #cbd5e1; padding: 8px 12px; border-radius: 12px; font-size: 20px; cursor: pointer; }
+        @media(min-width: 1000px) { .mobile-menu-btn { display: none; } }
+        .mobile-drawer { display: none; background: white; border-bottom: 2px solid #e2e8f0; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .mobile-drawer.open { display: block; }
+        .mobile-drawer a { display: block; padding: 10px 14px; color: #334155; text-decoration: none; font-weight: 700; border-radius: 8px; margin-bottom: 4px; font-size: 15px; }
+
+        /* Hero Zone */
+        .hero { padding: 60px 0 70px; background: linear-gradient(180deg, rgba(56,189,248,0.2) 0%, rgba(254,243,199,0.2) 100%); text-align: center; }
+        .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: #0f172a; margin-bottom: 16px; }
+        .hero h1 span { color: #0284c7; display: block; font-size: clamp(1.2rem, 2.5vw, 1.8rem); margin-top: 8px; }
+        
+        .intro-quote-box {
+            max-width: 750px;
+            margin: 0 auto 30px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 24px 30px;
+            border-radius: 20px;
+            border: 2px solid #fde68a;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+        }
+        .intro-quote-box h3 { font-size: 1.25rem; font-weight: 900; color: #0284c7; margin-bottom: 10px; }
+        .intro-quote-box p { font-size: 1.05rem; color: #334155; font-weight: 600; line-height: 1.7; }
+
+        .reg-callout { background: linear-gradient(135deg, #f97316, #f59e0b); max-width: 650px; margin: 0 auto; padding: 28px; border-radius: 24px; color: white; box-shadow: 0 10px 25px rgba(249,115,22,0.3); }
+
+        /* Cards Grid */
+        section { padding: 60px 0; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
+        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
+
+        .card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media(min-width: 768px) { .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        
+        .panel-box { background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .panel-box:hover { transform: translateY(-4px); }
+
+        footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
+        footer p { color: #94a3b8; font-size: 0.9rem; margin-top: 12px; }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo-area">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="种子学园 Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+                    <span style="display:none; font-size:24px;">🌱</span>
+                </div>
+                <div>
+                    <div style="font-size: 1.25rem; font-weight: 900; font-family: 'Fredoka', sans-serif; color: #0f172a;">种子学园</div>
+                    <div style="font-size: 11px; color: #64748b; font-weight: 700;">Tadika Tematik Ceria</div>
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="active">首页</a>
+                <a href="about.html">办学特色</a>
+                <a href="curriculum.html">PBL 教学</a>
+                <a href="testimonials.html">家长见证</a>
+                <a href="admission.html">入学资讯</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" class="btn-orange">📝 在线报名</a>
+                <a href="https://www.facebook.com/tematikceria/" target="_blank" rel="noopener noreferrer" class="social-icon-btn bg-fb">f</a>
+                <a href="https://www.instagram.com/zhongzi_tematikceria" target="_blank" rel="noopener noreferrer" class="social-icon-btn bg-ig">📷</a>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('open')">☰</button>
+        </div>
+
+        <div id="mobile-drawer" class="mobile-drawer">
+            <a href="index.html" style="color: #0284c7;">🏠 返回首页</a>
+            <a href="about.html">🌱 办学特色</a>
+            <a href="curriculum.html">📚 PBL 教学</a>
+            <a href="testimonials.html">💬 家长见证</a>
+            <a href="admission.html">🏫 入学资讯</a>
+            <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" style="background: #f97316; color: white; text-align: center; border-radius: 12px; margin-top: 10px;">📝 立即报名 2027 学年</a>
+        </div>
+    </header>
+
+    <!-- Hero 核心区域 -->
+    <section class="hero">
+        <div class="container">
+            <div style="display:inline-block; padding: 6px 16px; background:#fef08a; color:#713f12; border-radius:50px; font-weight:800; font-size:13px; margin-bottom:16px;">🌱 欢迎来到种子学园 Tadika Tematik Ceria</div>
+            <h1 class="font-cute">
+                种子学园欢迎您
+                <span>Welcome to Tadika Tematik Ceria</span>
+            </h1>
+
+            <div class="intro-quote-box">
+                <h3 class="font-cute">🌱 小种子的美好开始…</h3>
+                <p>在种子学园，我们相信：每个孩子都是一颗充满无限可能的“小种子”。我们用温暖与耐心滋养他们的好奇与活力，让孩子茁壮成长，为幸福的未来扎下坚实根基。</p>
+            </div>
+
+            <div class="reg-callout font-cute">
+                <div style="font-size: 1.35rem; font-weight: 900; margin-bottom: 8px;">📢 2027 学年度新生报名现已开放！</div>
+                <p style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 20px;">深耕大马 Klang 27 年，名额有限，欢迎家长在线提交报名表单或浏览各专区了解课程。</p>
+                <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" style="background: white; color: #ea580c; padding: 12px 24px; border-radius: 14px; font-weight: 900; text-decoration: none;">📝 填写 2027 新生报名表</a>
+                    <a href="about.html" style="background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; border-radius: 14px; font-weight: 900; text-decoration: none; border: 1px solid white;">了解办学特色</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心卡片板块（含小史链接） -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">关于学园</div>
+                <h2 class="font-cute">认识种子学园的成长故事与环境</h2>
+                <p style="color: #64748b; font-weight: 700; margin-top: 8px;">用爱与专业陪伴孩子探索未来的每一步</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- 学园小史卡片（已加入 YouTube 与 FlipHTML5 链接） -->
+                <div class="panel-box">
+                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 12px; color: #0f172a;">📜 学园小史</h3>
+                    <p style="font-size: 14.5px; color: #475569; line-height: 1.7; margin-bottom: 16px;">深耕大马 Klang 教育界 27 年，从最初的温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼稚园，见证无数孩子的成长。</p>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <a href="https://youtu.be/C8eGusx8Ra0?si=vTJj38Nn7KFYTJys" target="_blank" rel="noopener noreferrer" style="font-size: 12.5px; font-weight: 700; color: #0284c7; background: #e0f2fe; padding: 6px 12px; border-radius: 8px; text-decoration: none;">🎥 观看学园视频</a>
+                        <a href="https://online.fliphtml5.com/ykvoa/mivs/#p=1" target="_blank" rel="noopener noreferrer" style="font-size: 12.5px; font-weight: 700; color: #d97706; background: #fef3c7; padding: 6px 12px; border-radius: 8px; text-decoration: none;">📖 浏览电子简介册</a>
+                    </div>
+                </div>
+
+                <div class="panel-box">
+                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 12px; color: #0f172a;">🏡 环境设备</h3>
+                    <p style="font-size: 14.5px; color: #475569; line-height: 1.7;">拥有宽敞安全的户外草地、通风明亮的探究教室、儿童图书角及多元感官活动空间，提供最健康舒适的学习场域。</p>
+                </div>
+
+                <div class="panel-box">
+                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 12px; color: #0f172a;">👩‍🏫 师资介绍</h3>
+                    <p style="font-size: 14.5px; color: #475569; line-height: 1.7;">资深优秀的专业幼教团队（黄汇莛师、叶日红师、郑寜欣师、许雅惠师等），充满爱心、耐心与专业引导力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们与预约板块 -->
+    <section style="background: #f8fafc; border-top: 2px solid #e2e8f0; border-bottom: 2px solid #e2e8f0;">
+        <div class="container" style="max-width: 900px;">
+            <div class="section-header" style="margin-bottom: 30px;">
+                <div class="badge">联系我们</div>
+                <h2 class="font-cute">随时与我们取得联系</h2>
+                <p style="color: #64748b; font-weight: 700; margin-top: 6px;">欢迎咨询学费、课程详情或预约实地参观</p>
+            </div>
+
+            <div style="background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 35px; box-shadow: 0 6px 20px rgba(0,0,0,0.02);">
+                <div style="display: grid; grid-template-columns: 1fr; gap: 22px; font-size: 15px; color: #334155;">
+                    <div>
+                        <strong style="color: #0f172a; font-size: 1.05rem;">📞 电话：</strong><br>
+                        <span style="color: #475569;">03-33110653（办公室） &nbsp;|&nbsp; 016-2115349（何园长）</span>
+                    </div>
+                    <div>
+                        <strong style="color: #0f172a; font-size: 1.05rem;">✉️ Email：</strong><br>
+                        <a href="mailto:hckeong@gmail.com" style="color: #0284c7; text-decoration: none; font-weight: 700;">hckeong@gmail.com</a>
+                    </div>
+                    <div>
+                        <strong style="color: #0f172a; font-size: 1.05rem;">📍 地址：</strong><br>
+                        <span style="color: #475569; font-weight: 600;">NO.14, LORONG MENGKUANG, 41100 KLANG, SELANGOR, MALAYSIA.</span>
+                    </div>
+                    <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+                        <strong style="color: #0f172a; font-size: 1.05rem;">💬 现在就询问 / 预约参观：</strong><br>
+                        <div style="margin-top: 10px;">
+                            <a href="https://wa.me/60162115349" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: #25D366; box-shadow: 0 4px 12px rgba(37,211,102,0.3); font-size: 15px; padding: 12px 22px;">
+                                🟢 WhatsApp 咨询：016-2115349
+                            </a>
+                        </div>
+                    </div>
+                    <div style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+                        <strong style="color: #0f172a; font-size: 1.05rem;">🌐 关注我们的社媒主页：</strong><br>
+                        <div style="display: flex; gap: 12px; margin-top: 10px;">
+                            <a href="https://www.facebook.com/tematikceria/" target="_blank" rel="noopener noreferrer" class="social-icon-btn bg-fb" style="width: 44px; height: 44px; font-size: 18px;">f</a>
+                            <a href="https://www.instagram.com/zhongzi_tematikceria" target="_blank" rel="noopener noreferrer" class="social-icon-btn bg-ig" style="width: 44px; height: 44px; font-size: 18px;">📷</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                <div class="logo-circle" style="width: 44px; height: 44px;">
+                    <img src="logo.png" alt="Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+                    <span style="display:none; font-size:20px;">🌱</span>
+                </div>
+            </div>
+            <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
+            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
+            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

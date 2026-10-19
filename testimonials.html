@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家长见证 - 种子学园 Tadika Tematik Ceria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans SC', 'Fredoka', sans-serif; background-color: var(--amber-bg); color: var(--slate-text); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .font-cute { font-family: 'Fredoka', 'Noto Sans SC', sans-serif; }
+        
+        header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 2px solid #fef3c7; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+        .logo-circle { width: 50px; height: 50px; border-radius: 50%; background: #ffffff; color: white; display: flex; align-items: center; justify-content: center; border: 2px solid #34d399; overflow: hidden; flex-shrink: 0; }
+        .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+        
+        nav.desktop-nav { display: none; }
+        @media(min-width: 1000px) { nav.desktop-nav { display: flex; align-items: center; gap: 8px; } }
+        nav.desktop-nav a { padding: 8px 16px; border-radius: 12px; text-decoration: none; color: #334155; font-weight: 700; font-size: 15px; transition: all 0.2s; }
+        nav.desktop-nav a:hover, nav.desktop-nav a.active { background-color: #e0f2fe; color: #0284c7; }
+        
+        .header-right { display: none; align-items: center; gap: 10px; }
+        @media(min-width: 640px) { .header-right { display: flex; } }
+        .btn-orange { background: linear-gradient(135deg, #f97316, #ea580c); color: white; padding: 10px 18px; border-radius: 16px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 12px rgba(249,115,22,0.3); display: inline-flex; align-items: center; gap: 6px; }
+        .mobile-menu-btn { display: block; background: none; border: 1px solid #cbd5e1; padding: 8px 12px; border-radius: 12px; font-size: 20px; cursor: pointer; }
+        @media(min-width: 1000px) { .mobile-menu-btn { display: none; } }
+        .mobile-drawer { display: none; background: white; border-bottom: 2px solid #e2e8f0; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .mobile-drawer.open { display: block; }
+        .mobile-drawer a { display: block; padding: 10px 14px; color: #334155; text-decoration: none; font-weight: 700; border-radius: 8px; margin-bottom: 4px; font-size: 15px; }
+
+        section { padding: 60px 0; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
+        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
+
+        /* Testimonials Grid */
+        .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media(min-width: 768px) { .testimonial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media(min-width: 1024px) { .testimonial-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            border: 2px solid #e2e8f0;
+            padding: 28px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .testimonial-card:hover { transform: translateY(-4px); border-color: #38bdf8; }
+        .stars { color: #f59e0b; font-size: 18px; margin-bottom: 12px; }
+        .quote-text { font-size: 0.95rem; color: #334155; font-weight: 600; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+        .parent-info { border-top: 1px solid #f1f5f9; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; }
+        .parent-name { font-weight: 900; color: #0f172a; font-size: 0.95rem; }
+        .parent-tag { font-size: 12px; color: #0284c7; background: #e0f2fe; padding: 3px 10px; border-radius: 6px; font-weight: 700; }
+
+        /* Google Review Callout */
+        .google-review-box {
+            background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+            border: 2px solid #bae6fd;
+            border-radius: 24px;
+            padding: 35px;
+            text-align: center;
+            max-width: 800px;
+            margin: 50px auto 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.02);
+        }
+
+        footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
+        footer p { color: #94a3b8; font-size: 0.9rem; margin-top: 12px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo-area">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="种子学园 Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" />
+                    <span style="display:none; font-size:24px;">🌱</span>
+                </div>
+                <div>
+                    <div style="font-size: 1.25rem; font-weight: 900; font-family: 'Fredoka', sans-serif; color: #0f172a;">种子学园</div>
+                    <div style="font-size: 11px; color: #64748b; font-weight: 700;">Tadika Tematik Ceria</div>
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="index.html">首页</a>
+                <a href="about.html">办学特色</a>
+                <a href="curriculum.html">PBL 教学</a>
+                <a href="testimonials.html" class="active">家长见证</a>
+                <a href="admission.html">入学资讯</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" class="btn-orange">📝 在线报名</a>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('open')">☰</button>
+        </div>
+
+        <div id="mobile-drawer" class="mobile-drawer">
+            <a href="index.html">🏠 返回首页</a>
+            <a href="about.html">🌱 办学特色</a>
+            <a href="curriculum.html">📚 PBL 教学</a>
+            <a href="testimonials.html" style="color: #0284c7;">💬 家长见证</a>
+            <a href="admission.html">🏫 入学资讯</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">家长见证</div>
+                <h2 class="font-cute">听听家长们怎么说</h2>
+                <p style="color: #64748b; font-weight: 700; margin-top: 8px;">来自巴生家长们的真实信任与感动，见证孩子的成长与蜕变</p>
+            </div>
+
+            <div class="testimonial-grid">
+                
+                <!-- 见证 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote-text">“种子学园注重品德与学习动机，透过主题教学和动手操作让孩子保持高度兴趣。老师亲切且懂儿童发展，是孩子快乐的第二个家，非常推荐全人教育！”</p>
+                    </div>
+                    <div class="parent-info">
+                        <span class="parent-name">周小慧医生</span>
+                        <span class="parent-tag">缮潾, 禠羱妈妈</span>
+                    </div>
+                </div>
+
+                <!-- 见证 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote-text">“主题教学活泼生动、互动性强，户外教学更是孩子的最爱。定时更新的教学日志让我们能在家延伸教育。两个孩子在这里度过了快乐的三年！”</p>
+                    </div>
+                    <div class="parent-info">
+                        <span class="parent-name">杨斯兰</span>
+                        <span class="parent-tag">汶萱, 汶蔚妈妈</span>
+                    </div>
+                </div>
+
+                <!-- 见证 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote-text">“种子不仅传授知识，更塑造生活能力、人格与价值观。老师们如同父母般关爱孩子，启发好奇心与探索力，让家长十分宽心与感恩。”</p>
+                    </div>
+                    <div class="parent-info">
+                        <span class="parent-name">陈丽红老师</span>
+                        <span class="parent-tag">乐靖, 沁恩妈妈</span>
+                    </div>
+                </div>
+
+                <!-- 见证 4 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote-text">“三位孩子都在这里快乐上学、开心回家。学校拥有极佳的亲师合作观念，二十年用心灌溉，让大树般的种子学园陪伴孩子们度过充满欢乐的童年。”</p>
+                    </div>
+                    <div class="parent-info">
+                        <span class="parent-name">黄梅瑛老师</span>
+                        <span class="parent-tag">廖迅, 廖远, 廖迦妈妈</span>
+                    </div>
+                </div>
+
+                <!-- 见证 5 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote-text">“老师们充满爱心与耐心，秉持亲子、温馨、开创、学习的理念。主题教学让孩子在欢乐中打下稳固基础，快乐走向光明前程。”</p>
+                    </div>
+                    <div class="parent-info">
+                        <span class="parent-name">郑雪俐</span>
+                        <span class="parent-tag">恺俊, 颖希妈妈</span>
+                    </div>
+                </div>
+
+                <!-- 见证 6 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote-text">“三个宝贝都在这里开启学习第一站。快乐的环境与热心的师资让孩子们更乐意学习，主题教学也让他们对知识有更深入的探索与了解！”</p>
+                    </div>
+                    <div class="parent-info">
+                        <span class="parent-name">汤爱妮</span>
+                        <span class="parent-tag">奕宁, 奕翔, 奕宸妈妈</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 查看更多 Google Review 真实评价板块 -->
+            <div class="google-review-box">
+                <h3 class="font-cute" style="font-size: 1.4rem; color: #0369a1; margin-bottom: 10px;">⭐ 查看更多 Google Review 真实评价</h3>
+                <p style="font-size: 1.025rem; color: #334155; font-weight: 600; margin-bottom: 20px;">
+                    想要了解更多来自各届毕业家长对种子学园的真实好评与反馈吗？欢迎点击下方链接前往 Google 评价页面查看或留下您的宝贵足迹！
+                </p>
+                <a href="https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4TVRsM01qbDBjRzQYCg#sv=CAESzQEKuQEStgEKd0FKaVQ0dElwRGVTWlI0cDJuekJjMGIwMzN6MFkwRVBYRGl1Ny1rak9fb05lZ2FjY3ZTZVA0WlpYYTUzaU9SZFF3VF9EN21saU83X2g0WFc2N210bzVEY3FDdzJrSjF5S3BWbGRJdjNsSExQenpZSTRjVVZqVW44EhdYTHpWYXFUdUM5U21odmNQenZyam1BaxoiQURzcjlmUWJKV2VkMG1rcDgxY19ZTW9HbGd3a3MwdmVDdxIEODA1MRoBMyoAMAA4AUAAGAAgooHEuANKAhAB" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: linear-gradient(135deg, #0284c7, #0369a1); font-size: 15px; padding: 12px 26px;">
+                    🌐 查看更多 Google Review 真实评价
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
+            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
+            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

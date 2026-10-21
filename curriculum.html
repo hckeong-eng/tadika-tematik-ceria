@@ -35,8 +35,24 @@
         .mobile-drawer.open { display: block; }
         .mobile-drawer a { display: block; padding: 10px 14px; color: #334155; text-decoration: none; font-weight: 700; border-radius: 8px; margin-bottom: 4px; font-size: 15px; }
 
-        section { padding: 60px 0; }
+        section { padding: 50px 0; }
         
+        /* 表格样式 */
+        .schedule-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #e2e8f0;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .schedule-table th { background: #e0f2fe; color: #0284c7; padding: 14px 16px; text-align: left; font-weight: 800; font-size: 1rem; }
+        .schedule-table td { padding: 14px 16px; border-bottom: 1px solid #f1f5f9; color: #334155; font-size: 0.95rem; font-weight: 600; }
+        .schedule-table tr:last-child td { border-bottom: none; }
+
         /* Feature Cards Grid */
         .card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
         @media(min-width: 768px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -63,12 +79,7 @@
         }
         .feature-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
         
-        /* 列表样式的卡片内文 */
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
         .feature-list li {
             font-size: 0.95rem;
             color: #334155;
@@ -136,9 +147,45 @@
     <section>
         <div class="container">
             
-            <div style="text-align: center; margin-bottom: 35px;">
+            <!-- 页面主标题 -->
+            <div style="text-align: center; margin-bottom: 40px;">
                 <div style="display:inline-block; padding: 6px 16px; background:#fef08a; color:#713f12; border-radius:50px; font-weight:800; font-size:13px; text-transform:uppercase; margin-bottom:12px;">探索与体验</div>
-                <h1 class="font-cute" style="font-size: 2rem; color: #0f172a;">PBL 专案探究与多元活动</h1>
+                <h1 class="font-cute" style="font-size: 2.2rem; color: #0f172a;">PBL 专案探究与课程规划</h1>
+            </div>
+
+            <!-- 1. 班级模式与时间表 -->
+            <div style="background: white; border-radius: 20px; border: 2px solid #e2e8f0; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <h2 class="font-cute" style="font-size: 1.5rem; color: #0f172a; margin-bottom: 16px;">⏰ 班级模式与一日流程</h2>
+                <p style="color: #475569; font-weight: 600; font-size: 1.05rem; margin-bottom: 20px;">
+                    种子学园提供半日制与全日制选择，通过规律且有弹性的日常流程，陪伴孩子建立良好的作息与自我管理能力。
+                </p>
+
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">时段</th>
+                            <th style="width: 35%;">班级模式</th>
+                            <th style="width: 40%;">主要活动内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>08:00 AM - 12:30 PM</strong></td>
+                            <td>半日制 (Half-Day)</td>
+                            <td>早会、自由游戏、PBL 主题探究、三语教学、体能与经典导读</td>
+                        </tr>
+                        <tr>
+                            <td><strong>12:30 PM - 06:00 PM</strong></td>
+                            <td>全日制 (Full-Day)</td>
+                            <td>营养午餐、午休理疗、正念静心、幼小衔接强化与生活技能培养</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 2. 三张独立活动卡片 -->
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 class="font-cute" style="font-size: 1.6rem; color: #0f172a;">🎉 精彩多元活动</h2>
             </div>
 
             <div class="card-grid">
@@ -168,7 +215,7 @@
                     <div class="card-icon" style="background: #fce7f3; color: #db2777;">🎓</div>
                     <h3 class="font-cute">毕业典礼</h3>
                     <ul class="feature-list">
-                        <li>举办充满意义的毕业典礼与成长仪式，引导宝贝制作毕业纪念册，记录在园期间的蜕变与精彩瞬间。</li>
+                        <li>举办充满意义的毕业典礼与成长仪式，记录宝贝们在园期间的蜕变与精彩瞬间。</li>
                         <li>培养自信心与独立品格，为顺利迈向小学生活奠定稳固的情感与心理基础。</li>
                     </ul>
                 </div>
@@ -189,9 +236,4 @@
             </div>
             <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
             <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p style="margin-top

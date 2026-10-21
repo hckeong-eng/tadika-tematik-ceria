@@ -37,20 +37,6 @@
 
         section { padding: 60px 0; }
         
-        /* 大幅加大的创办历史标题标签 */
-        .badge-large {
-            display: inline-block;
-            padding: 10px 28px;
-            background: #fef08a;
-            color: #713f12;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 1.35rem;
-            letter-spacing: 0.8px;
-            margin-bottom: 16px;
-            box-shadow: 0 6px 16px rgba(254, 240, 138, 0.6);
-        }
-        
         .intro-banner {
             background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
             border: 2px solid #bae6fd;
@@ -100,21 +86,30 @@
         }
         .feature-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
         
-        /* 关键字标签云样式 */
-        .keyword-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
+        /* 列表样式的卡片内文 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .tag {
-            background: #f8fafc;
-            border: 1.5px solid #cbd5e1;
+        .feature-list li {
+            font-size: 0.95rem;
             color: #334155;
-            padding: 6px 14px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            font-weight: 700;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .feature-list li:last-child { margin-bottom: 0; }
+        .feature-list li::before {
+            content: "•";
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 4px;
+            top: -2px;
         }
 
         footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
@@ -166,7 +161,7 @@
             
             <!-- 1. 创办历史背景 -->
             <div class="intro-banner">
-                <div class="badge-large font-cute">🌱 27 年陪伴成长</div>
+                <h1 class="font-cute" style="font-size: 2rem; color: #0f172a; margin-bottom: 12px;">🌱 27 年陪伴成长</h1>
                 <p>
                     种子学园于 1999 年创办，至今走过二十七年岁月。许多孩子在此留下宝贵的学习经历和美好的童年。
                     种子是巴生最早推行开放教育及主题教学的幼儿园之一。
@@ -194,56 +189,40 @@
                 <div class="feature-card">
                     <div class="card-icon" style="background: #e0f2fe; color: #0284c7;">👕</div>
                     <h3 class="font-cute">弹性着装和学习自主</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">上学服装自由选择</span>
-                        <span class="tag">充足游戏时间</span>
-                        <span class="tag">班级主题投票</span>
-                        <span class="tag">充分学习自主</span>
-                    </div>
+                    <ul class="feature-list">
+                        <li>鼓励学生自由选择上学服装，结合充足的自由游戏时间，充分展现个性与创造力。</li>
+                        <li>通过班级主题讨论与投票机制，赋予孩子充分的学习自主权，引导他们成为学习的主人。</li>
+                    </ul>
                 </div>
 
-                <!-- 卡片 2：多元化课程体系 (已加入新增要点) -->
+                <!-- 卡片 2：多元化课程体系 -->
                 <div class="feature-card">
                     <div class="card-icon" style="background: #d1fae5; color: #059669;">🧠</div>
                     <h3 class="font-cute">多元化课程体系</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">脑科学规律</span>
-                        <span class="tag">全球幼教精髓</span>
-                        <span class="tag">紧贴KSPK纲要</span>
-                        <span class="tag">全面启发启蒙</span>
-                        <span class="tag">华国英三语教学</span>
-                        <span class="tag">均衡体能发展</span>
-                        <span class="tag">中华经典导读</span>
-                        <span class="tag">生活教育与人格培养</span>
-                        <span class="tag">幼小衔接课程(全日制)</span>
-                    </div>
+                    <ul class="feature-list">
+                        <li>遵循大脑科学规律并结合全球幼教精髓，紧贴国家 KSPK 课程纲要，涵盖华国英三语与中华经典导读。</li>
+                        <li>注重均衡体能与生活自理教育，全日制更设幼小衔接课程，全方位培育孩子的独立品格与全面潜能。</li>
+                    </ul>
                 </div>
 
-                <!-- 卡片 3：PBL 主题专案教学 (已加入讨论与投票流程) -->
+                <!-- 卡片 3：PBL 主题专案教学 -->
                 <div class="feature-card">
                     <div class="card-icon" style="background: #fef3c7; color: #d97706;">💡</div>
                     <h3 class="font-cute">PBL 主题专案教学</h3>
-                    <p style="font-size: 0.93rem; color: #475569; font-weight: 600; line-height: 1.6; margin-bottom: 12px;">
-                        老师和孩子进行讨论，选出大家喜爱的主题，经过投票变成班上的主题课程，让孩子充分掌握学习自主。
-                    </p>
-                    <div class="keyword-tags">
-                        <span class="tag">探究式主题</span>
-                        <span class="tag">激发内在动力</span>
-                        <span class="tag">互动体验萌发</span>
-                        <span class="tag">探索充满乐趣</span>
-                    </div>
+                    <ul class="feature-list">
+                        <li>师生共同讨论并投票选出喜爱的探究主题，转化成班级深度专案课程，全面激发内在学习动力。</li>
+                        <li>在动手实践与互动体验中萌发探索精神，让学习过程充满乐趣与主动思考的成就感。</li>
+                    </ul>
                 </div>
 
-                <!-- 卡片 4：家园合作 (新增卡片) -->
+                <!-- 卡片 4：家园合作 -->
                 <div class="feature-card">
                     <div class="card-icon" style="background: #fce7f3; color: #db2777;">🤝</div>
                     <h3 class="font-cute">家园合作</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">亲子教养咨询</span>
-                        <span class="tag">年度亲子家庭日</span>
-                        <span class="tag">亲师一对一交流约谈</span>
-                        <span class="tag">家长教学参与</span>
-                    </div>
+                    <ul class="feature-list">
+                        <li>提供专业亲子教养咨询与一对一亲师交流约谈，建立密切透明的家园沟通桥梁。</li>
+                        <li>举办年度亲子家庭日并鼓励家长深度参与教学，共同营造温馨相伴的教育成长环境。</li>
+                    </ul>
                 </div>
 
             </div>

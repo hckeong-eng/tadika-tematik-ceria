@@ -38,17 +38,10 @@
         .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
         .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
 
-        .card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-        @media(min-width: 768px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-        
-        .panel-box { background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); margin-bottom: 24px; }
-        
-        /* 关键字标签云样式 */
-        .keyword-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-        .tag { background: #f8fafc; border: 1.5px solid #cbd5e1; color: #334155; padding: 6px 14px; border-radius: 10px; font-size: 0.9rem; font-weight: 700; }
+        .panel-box { background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); margin-bottom: 30px; }
 
         /* 幼儿视角教案例卡片样式 */
-        .story-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 24px; }
+        .story-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
         @media(min-width: 768px) { .story-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         .story-card {
             background: #ffffff;
@@ -62,7 +55,7 @@
         .story-card h4 { font-size: 1.15rem; font-weight: 900; color: #0284c7; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
         .story-card p { font-size: 0.95rem; color: #334155; font-weight: 600; line-height: 1.7; }
 
-        /* 常年活动详情三小栏样式（改为Point Form列表） */
+        /* 常年活动详情三小栏样式 */
         .activity-details-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
         @media(min-width: 768px) { .activity-details-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         .activity-sub-card {
@@ -155,36 +148,32 @@
                 <p style="color: #64748b; font-weight: 700; margin-top: 8px;">遵循 KSPK 国家学前课程纲要，以幼儿兴趣为导向</p>
             </div>
 
-            <div class="card-grid" style="margin-bottom: 30px;">
-                <!-- 精彩教学分享卡片 (关键字化) -->
-                <div class="panel-box" style="background: #f0fdf4; border-color: #bbf7d0; margin-bottom: 0;">
-                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #065f46;">💡 精彩教学分享</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">航海与船只主题</span>
-                        <span class="tag">身体细菌探究</span>
-                        <span class="tag">学校真好玩</span>
-                        <span class="tag">主动观察提问</span>
-                        <span class="tag">动手实验成果</span>
-                        <span class="tag">批判性思维</span>
-                        <span class="tag">探索精神培养</span>
-                    </div>
+            <!-- 1. 移到前面：幼儿视角的三个精彩教案例分享 -->
+            <div style="margin-bottom: 40px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span style="font-size: 13px; font-weight: 900; color: #0284c7; background: #e0f2fe; padding: 6px 18px; border-radius: 50px; text-transform: uppercase;">🌟 趣味成长足迹</span>
+                    <h3 class="font-cute" style="font-size: 2.1rem; color: #0f172a; margin-top: 12px; font-weight: 900;">幼儿眼中的奇妙探索故事</h3>
                 </div>
+                
+                <div class="story-grid">
+                    <div class="story-card" style="border-color: #bae6fd; background: #f0f9ff;">
+                        <h4 class="font-cute">⛵ 豌豆班：我们的梦想大游轮开船啦！</h4>
+                        <p>“老师，为什么船不会沉下去呢？”我们在班上用大积木和塑料瓶做了一艘超级大游轮！大家一起投票选出游泳池和餐厅的位置，还去巴生河边看大吊车搬货、观察拦截垃圾的神奇小船。虽然小船一开始常常翻倒，但我们一起试着调整重量，真的让它浮起来啦！</p>
+                    </div>
 
-                <!-- 常年活动概览卡片 (关键字化) -->
-                <div class="panel-box" style="background: #fffbeb; border-color: #fde68a; margin-bottom: 0;">
-                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #92400e;">🎪 常年活动概览</h3>
-                    <div class="keyword-tags">
-                        <span class="tag">节庆文化庆典</span>
-                        <span class="tag">户外校外参观</span>
-                        <span class="tag">温馨亲子时光</span>
-                        <span class="tag">隆重毕业典礼</span>
-                        <span class="tag">丰富童年记忆</span>
-                        <span class="tag">锻炼社交素养</span>
+                    <div class="story-card" style="border-color: #fed7aa; background: #fff7ed;">
+                        <h4 class="font-cute">🦠 黄豆班：身体里的“细菌大作战”</h4>
+                        <p>“快用肥皂洗手洗 20 秒，把坏细菌赶跑！”我们在学校里玩模拟胃的工作、做呼吸系统模型，还用毛线缠出好玩的细菌娃娃。妈妈怀孕好辛苦，我们挺着水球大肚子体验后，都抱抱妈妈说：“谢谢您，我以后要当乖小孩，还要教全家人做好环保和垃圾分类哦！”</p>
+                    </div>
+
+                    <div class="story-card" style="border-color: #fbcfe8; background: #fdf2f8;">
+                        <h4 class="font-cute">🏫 芝麻班：学校真好玩，我长大了！</h4>
+                        <p>刚来学校时我还会哭哭找妈妈，现在我最喜欢去喂小鱼、在沙池玩排队了！我们一起搓汤圆、滚元宵、跳竹竿舞，还学会了用“气球呼吸法”让自己不生气。每天放学都会开心地帮老师擦桌子和关水龙头，当个棒棒的“地球小超人”！</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 常年活动详细介绍板块 (三张独立卡片改为两句话 Point Form) -->
+            <!-- 2. 移到下面：丰富多彩的常年活动与成长足迹 -->
             <div class="panel-box" style="background: #ffffff; border-color: #fde68a; margin-bottom: 40px;">
                 <h3 class="font-cute" style="font-size: 1.35rem; margin-bottom: 12px; color: #92400e; text-align: center;">🎪 丰富多彩的常年活动与成长足迹</h3>
                 <p style="font-size: 1.02rem; color: #334155; line-height: 1.8; text-align: center; max-width: 950px; margin: 0 auto 25px; font-weight: 600;">
@@ -216,126 +205,3 @@
                             <li>培养自信心与独立品格，为顺利迈向小学生活奠定稳固的情感与心理基础。</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <!-- 幼儿视角的三个精彩教案例分享 -->
-            <div style="margin-bottom: 40px;">
-                <div style="text-align: center; margin-bottom: 25px;">
-                    <span style="font-size: 13px; font-weight: 900; color: #0284c7; background: #e0f2fe; padding: 6px 18px; border-radius: 50px; text-transform: uppercase;">🌟 趣味成长足迹</span>
-                    <h3 class="font-cute" style="font-size: 2.1rem; color: #0f172a; margin-top: 12px; font-weight: 900;">幼儿眼中的奇妙探索故事</h3>
-                </div>
-                
-                <div class="story-grid">
-                    <div class="story-card" style="border-color: #bae6fd; background: #f0f9ff;">
-                        <h4 class="font-cute">⛵ 豌豆班：我们的梦想大游轮开船啦！</h4>
-                        <p>“老师，为什么船不会沉下去呢？”我们在班上用大积木和塑料瓶做了一艘超级大游轮！大家一起投票选出游泳池和餐厅的位置，还去巴生河边看大吊车搬货、观察拦截垃圾的神奇小船。虽然小船一开始常常翻倒，但我们一起试着调整重量，真的让它浮起来啦！</p>
-                    </div>
-
-                    <div class="story-card" style="border-color: #fed7aa; background: #fff7ed;">
-                        <h4 class="font-cute">🦠 黄豆班：身体里的“细菌大作战”</h4>
-                        <p>“快用肥皂洗手洗 20 秒，把坏细菌赶跑！”我们在学校里玩模拟胃的工作、做呼吸系统模型，还用毛线缠出好玩的细菌娃娃。妈妈怀孕好辛苦，我们挺着水球大肚子体验后，都抱抱妈妈说：“谢谢您，我以后要当乖小孩，还要教全家人做好环保和垃圾分类哦！”</p>
-                    </div>
-
-                    <div class="story-card" style="border-color: #fbcfe8; background: #fdf2f8;">
-                        <h4 class="font-cute">🏫 芝麻班：学校真好玩，我长大了！</h4>
-                        <p>刚来学校时我还会哭哭找妈妈，现在我最喜欢去喂小鱼、在沙池玩排队了！我们一起搓汤圆、滚元宵、跳竹竿舞，还学会了用“气球呼吸法”让自己不生气。每天放学都会开心地帮老师擦桌子和关水龙头，当个棒棒的“地球小超人”！</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 班级课表 -->
-            <div class="panel-box">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-                    <div>
-                        <h3 class="font-cute" style="font-size: 1.4rem;">📅 四大班级课表与作息</h3>
-                        <p style="font-size: 12px; color: #64748b; font-weight: 800;">TADIKA TEMATIK CERIA TIMETABLE</p>
-                    </div>
-                    <div class="tabs-container" style="margin-bottom: 0;">
-                        <button onclick="switchClassTab('huangdou')" id="tab-huangdou" class="tab-btn active">黄豆班</button>
-                        <button onclick="switchClassTab('hongdou')" id="tab-hongdou" class="tab-btn">红豆班</button>
-                        <button onclick="switchClassTab('lvdou')" id="tab-lvdou" class="tab-btn">绿豆班</button>
-                        <button onclick="switchClassTab('zhima')" id="tab-zhima" class="tab-btn">芝麻班</button>
-                    </div>
-                </div>
-
-                <div id="teacher-info" style="background: #fef3c7; color: #78350f; padding: 8px 14px; border-radius: 10px; font-weight: 900; font-size: 13px; display: inline-block; margin-bottom: 16px;">
-                    导师：郑寜欣师
-                </div>
-
-                <div style="overflow-x: auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 150px;">时间</th>
-                                <th>课程安排 / 活动内容</th>
-                            </tr>
-                        </thead>
-                        <tbody id="timetable-body"></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- 发展评估 (关键字化) -->
-            <div class="panel-box" style="background: #f8fafc; margin-top: 24px;">
-                <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #0f172a;">📊 幼儿发展评估体系</h3>
-                <div class="keyword-tags">
-                    <span class="tag">双轨评量系统</span>
-                    <span class="tag">学习成长档案</span>
-                    <span class="tag">手工作品记录</span>
-                    <span class="tag">幼儿发展评估册</span>
-                    <span class="tag">KSPK国家纲要</span>
-                    <span class="tag">多维度追踪</span>
-                    <span class="tag">全方位见证成长</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
-            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        const timetableData = {
-            huangdou: {
-                teacher: "黄汇莛师",
-                schedule: [
-                    { time: "8:30 - 9:30", activity: "户外活动 / 晨谈" },
-                    { time: "9:30 - 10:00", activity: "茶点" },
-                    { time: "10:00 - 11:30", activity: "综合学习活动与主题探究" },
-                    { time: "11:30 - 12:30", activity: "BM & English 语文课" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 4:00", activity: "起床 / 学习区 / 经典导读" },
-                    { time: "4:00 - 5:30", activity: "户外活动与下午茶点" }
-                ]
-            },
-            hongdou: {
-                teacher: "叶日红师",
-                schedule: [
-                    { time: "8:30 - 9:30", activity: "晨谈 / 户外活动" },
-                    { time: "9:30 - 10:00", activity: "茶点" },
-                    { time: "10:00 - 11:30", activity: "综合学习活动 / 方案探究" },
-                    { time: "11:30 - 12:30", activity: "BM & English 语文课" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 3:30", activity: "起床 / 学习区 / 经典导读" },
-                    { time: "3:30 - 5:30", activity: "户外活动 / 英语强化与茶点" }
-                ]
-            },
-            lvdou: {
-                teacher: "郑寜欣师",
-                schedule: [
-                    { time: "8:30 - 9:30", activity: "晨谈 / 学习区活动" },
-                    { time: "9:30 - 10:00", activity: "户外活动" },
-                    { time: "10:00 - 10:30", activity: "茶点" },
-                    { time: "10:30 - 12:30", activity: "BM / English / 综合学习活动" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 4:00", activity: "起床 / 户外活动 / 经典导读" },
-                    { time: "4:00 - 5:30", activity: "Minum Petang / BM 强化" }
-                ]
-            },
-            zhima

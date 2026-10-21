@@ -34,9 +34,8 @@
         .mobile-drawer a { display: block; padding: 10px 14px; color: #334155; text-decoration: none; font-weight: 700; border-radius: 8px; margin-bottom: 4px; font-size: 15px; }
 
         section { padding: 60px 0; }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
         .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
-        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
 
         .panel-box { background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); margin-bottom: 30px; }
 
@@ -145,15 +144,12 @@
         <div class="container">
             <div class="section-header">
                 <div class="badge">PBL 教学</div>
-                <h2 class="font-cute">精彩教学分享、常年活动与课表</h2>
-                <p style="color: #64748b; font-weight: 700; margin-top: 8px;">遵循 KSPK 国家学前课程纲要，以幼儿兴趣为导向</p>
             </div>
 
-            <!-- 1. 幼儿视角的三个精彩教案例分享 (排在前面) -->
+            <!-- 1. 幼儿眼中的奇妙探索故事 (移到最前面) -->
             <div style="margin-bottom: 40px;">
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <span style="font-size: 13px; font-weight: 900; color: #0284c7; background: #e0f2fe; padding: 6px 18px; border-radius: 50px; text-transform: uppercase;">🌟 趣味成长足迹</span>
-                    <h3 class="font-cute" style="font-size: 2.1rem; color: #0f172a; margin-top: 12px; font-weight: 900;">幼儿眼中的奇妙探索故事</h3>
+                    <h3 class="font-cute" style="font-size: 2.1rem; color: #0f172a; font-weight: 900;">幼儿眼中的奇妙探索故事</h3>
                 </div>
                 
                 <div class="story-grid">
@@ -174,7 +170,7 @@
                 </div>
             </div>
 
-            <!-- 2. 丰富多彩的常年活动与成长足迹 (移到下面) -->
+            <!-- 2. 丰富多彩的常年活动与成长足迹 (移到故事下方) -->
             <div class="panel-box" style="background: #ffffff; border-color: #fde68a; margin-bottom: 40px;">
                 <h3 class="font-cute" style="font-size: 1.35rem; margin-bottom: 12px; color: #92400e; text-align: center;">🎪 丰富多彩的常年活动与成长足迹</h3>
                 <p style="font-size: 1.02rem; color: #334155; line-height: 1.8; text-align: center; max-width: 950px; margin: 0 auto 25px; font-weight: 600;">
@@ -194,7 +190,7 @@
                     <div class="activity-sub-card">
                         <h4 class="font-cute">🚌 校外参观</h4>
                         <ul class="feature-list">
-                            <li>配合PBL主题，组织多元的校外实地参观，让孩子走出教室亲近自然与探索真实世界。</li>
+                            <li>定期组织多元的校外实地参观，让孩子走出教室亲近自然与探索真实世界。</li>
                             <li>在观察与实践中激发好奇心与求知欲，将课堂知识与生活经验完美结合。</li>
                         </ul>
                     </div>
@@ -202,14 +198,14 @@
                     <div class="activity-sub-card">
                         <h4 class="font-cute">🎓 毕业典礼</h4>
                         <ul class="feature-list">
-                            <li>举办充满意义的毕业典礼与成长仪式，引导宝贝们制作毕业纪念册，记录在园期间的蜕变与精彩瞬间。</li>
+                            <li>举办充满意义的毕业典礼与成长仪式，记录宝贝们在园期间的蜕变与精彩瞬间。</li>
                             <li>培养自信心与独立品格，为顺利迈向小学生活奠定稳固的情感与心理基础。</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. 完整显示：四大班级课表与作息（JS驱动动态表格） -->
+            <!-- 3. 四大班级课表与作息 (含可点击切换的页签与动态数据) -->
             <div class="panel-box">
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
                     <div>
@@ -237,17 +233,17 @@
                             </tr>
                         </thead>
                         <tbody id="timetable-body">
-                            <!-- JS 会自动填充表格数据 -->
+                            <!-- 页面加载时由 JavaScript 自动渲染此区域 -->
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- 4. 一句话描述：幼儿发展评估体系 -->
+            <!-- 4. 幼儿发展评估体系 (一句话描述) -->
             <div class="panel-box" style="background: #f8fafc; margin-top: 24px; text-align: center;">
                 <h3 class="font-cute" style="font-size: 1.25rem; margin-bottom: 8px; color: #0f172a;">📊 幼儿发展评估体系</h3>
                 <p style="font-size: 0.98rem; color: #475569; font-weight: 700; margin: 0;">
-                    我们结合 KSPK 国家学前课纲，采用双轨评估与建立成长档案，全方位记录并见证孩子的每一阶段进步。
+                    结合 KSPK 国家纲要建立双轨评估与成长档案，全方位记录并见证孩子的每一阶段进步。
                 </p>
             </div>
         </div>
@@ -261,7 +257,7 @@
         </div>
     </footer>
 
-    <!-- 时间表脚本：确保页面加载时及点击标签时正常显示表格 -->
+    <!-- JS 逻辑：实现四大班级课表完美渲染与动态切换 -->
     <script>
         const timetableData = {
             huangdou: {
@@ -316,6 +312,8 @@
         function switchClassTab(key) {
             const data = timetableData[key];
             if (!data) return;
+
+            // 切换按钮高亮状态
             ['huangdou', 'hongdou', 'lvdou', 'zhima'].forEach(k => {
                 const btn = document.getElementById('tab-' + k);
                 if (btn) btn.classList.remove('active');
@@ -323,9 +321,11 @@
             const activeBtn = document.getElementById('tab-' + key);
             if (activeBtn) activeBtn.classList.add('active');
             
+            // 更新导师名字
             const teacherEl = document.getElementById('teacher-info');
             if (teacherEl) teacherEl.innerText = `导师：${data.teacher}`;
 
+            // 渲染表格数据
             const tbody = document.getElementById('timetable-body');
             if (tbody) {
                 tbody.innerHTML = data.schedule.map(row => `
@@ -337,6 +337,7 @@
             }
         }
 
+        // 页面初始化加载时默认显示黄豆班时间表
         document.addEventListener("DOMContentLoaded", function() {
             switchClassTab('huangdou');
         });

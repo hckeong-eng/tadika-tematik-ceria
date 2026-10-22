@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>家长见证 - 种子学园 Tadika Tematik Ceria</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- AEO 核心：家长评价结构化数据 (Schema Review) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "种子学园 Tadika Tematik Ceria",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "6"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "周小慧医生" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "种子学园注重品德与学习动机，透过主题教学和动手操作让孩子保持高度兴趣。老师亲切且懂儿童发展，是孩子快乐的第二个家！"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "杨斯兰" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "主题教学活泼生动、互动性强，户外教学更是孩子的最爱。两个孩子在这里度过了快乐的三年！"
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +65,6 @@
         section { padding: 60px 0; }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
         .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
-        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
 
         /* Testimonials Grid */
         .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
@@ -108,11 +136,11 @@
         </div>
 
         <div id="mobile-drawer" class="mobile-drawer">
-            <a href="index.html">🏠 返回首页</a>
-            <a href="about.html">🌱 办学特色</a>
-            <a href="curriculum.html">📚 PBL 教学</a>
-            <a href="testimonials.html" style="color: #0284c7;">💬 家长见证</a>
-            <a href="admission.html">🏫 入学资讯</a>
+            <a href="index.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
+            <a href="about.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
+            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="testimonials.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
+            <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
         </div>
     </header>
 
@@ -120,7 +148,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="badge">家长见证</div>
-                <h2 class="font-cute">听听家长们怎么说</h2>
+                <h1 class="font-cute" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a;">家长见证：来自巴生家长的真实信任</h1>
                 <p style="color: #64748b; font-weight: 700; margin-top: 8px;">来自巴生家长们的真实信任与感动，见证孩子的成长与蜕变</p>
             </div>
 
@@ -202,7 +230,7 @@
 
             <!-- 查看更多 Google Review 真实评价板块 -->
             <div class="google-review-box">
-                <h3 class="font-cute" style="font-size: 1.4rem; color: #0369a1; margin-bottom: 10px;">⭐ 查看更多 Google Review 真实评价</h3>
+                <h2 class="font-cute" style="font-size: 1.4rem; color: #0369a1; margin-bottom: 10px;">⭐ 查看更多 Google Review 真实评价</h2>
                 <p style="font-size: 1.025rem; color: #334155; font-weight: 600; margin-bottom: 20px;">
                     想要了解更多来自各届毕业家长对种子学园的真实好评与反馈吗？欢迎点击下方链接前往 Google 评价页面查看或留下您的宝贵足迹！
                 </p>

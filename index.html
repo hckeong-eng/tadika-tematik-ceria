@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>种子学园 Tadika Tematik Ceria - 官方首页</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- AEO 核心：机构结构化数据 (JSON-LD Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Preschool",
+      "name": "种子学园 Tadika Tematik Ceria",
+      "alternateName": "种子学园",
+      "description": "深耕大马雪州巴生 27 年的优质幼儿园，注重方案探究（PBL）与全面素质发展，招收 3-6 岁幼儿。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NO.14, LORONG MENGKUANG",
+        "addressLocality": "KLANG",
+        "addressRegion": "SELANGOR",
+        "postalCode": "41100",
+        "addressCountry": "MY"
+      },
+      "telephone": "+60162115349",
+      "email": "hckeong@gmail.com",
+      "url": "",
+      "sameAs": [
+        "https://www.facebook.com/tematikceria/",
+        "https://www.instagram.com/zhongzi_tematikceria"
+      ],
+      "ageRange": "3-6 years"
+    }
+    </script>
+
     <style>
         :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -113,11 +141,11 @@
         </div>
 
         <div id="mobile-drawer" class="mobile-drawer">
-            <a href="index.html" style="color: #0284c7;">🏠 返回首页</a>
-            <a href="about.html">🌱 办学特色</a>
-            <a href="curriculum.html">📚 PBL 教学</a>
-            <a href="testimonials.html">💬 家长见证</a>
-            <a href="admission.html">🏫 入学资讯</a>
+            <a href="index.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
+            <a href="about.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
+            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="testimonials.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
+            <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
             <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" style="background: #f97316; color: white; text-align: center; border-radius: 12px; margin-top: 10px;">📝 立即报名 2027 学年</a>
         </div>
     </header>

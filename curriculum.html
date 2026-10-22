@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PBL 教学与课表 - 种子学园 Tadika Tematik Ceria</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- AEO 核心：课程页面结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "种子学园 PBL 项目式教学与幼儿课程",
+      "description": "结合方案探究（PBL）、大脑科学规律与国家 KSPK 纲要的多元化幼儿课程，涵盖黄豆班、红豆班、绿豆班及芝麻班。",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "种子学园 Tadika Tematik Ceria"
+      }
+    }
+    </script>
+
     <style>
         :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -132,11 +147,11 @@
         </div>
 
         <div id="mobile-drawer" class="mobile-drawer">
-            <a href="index.html">🏠 返回首页</a>
-            <a href="about.html">🌱 办学特色</a>
-            <a href="curriculum.html" style="color: #0284c7;">📚 PBL 教学</a>
-            <a href="testimonials.html">💬 家长见证</a>
-            <a href="admission.html">🏫 入学资讯</a>
+            <a href="index.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
+            <a href="about.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
+            <a href="curriculum.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="testimonials.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
+            <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
         </div>
     </header>
 
@@ -144,27 +159,28 @@
         <div class="container">
             <div class="section-header">
                 <div class="badge">PBL 教学</div>
+                <h1 class="font-cute" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a;">种子学园 PBL 项目式教学与课表</h1>
             </div>
 
             <!-- 1. 幼儿眼中的奇妙探索故事 (移到最前面) -->
             <div style="margin-bottom: 40px;">
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <h3 class="font-cute" style="font-size: 2.1rem; color: #0f172a; font-weight: 900;">幼儿眼中的奇妙探索故事</h3>
+                    <h2 class="font-cute" style="font-size: 2.1rem; color: #0f172a; font-weight: 900;">幼儿眼中的奇妙探索故事</h2>
                 </div>
                 
                 <div class="story-grid">
                     <div class="story-card" style="border-color: #bae6fd; background: #f0f9ff;">
-                        <h4 class="font-cute">⛵ 豌豆班：我们的梦想大游轮开船啦！</h4>
+                        <h3 class="font-cute" style="font-size: 1.15rem; font-weight: 900; color: #0284c7; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">⛵ 豌豆班：我们的梦想大游轮开船啦！</h3>
                         <p>“老师，为什么船不会沉下去呢？”我们在班上用大积木和塑料瓶做了一艘超级大游轮！大家一起投票选出游泳池和餐厅的位置，还去巴生河边看大吊车搬货、观察拦截垃圾的神奇小船。虽然小船一开始常常翻倒，但我们一起试着调整重量，真的让它浮起来啦！</p>
                     </div>
 
                     <div class="story-card" style="border-color: #fed7aa; background: #fff7ed;">
-                        <h4 class="font-cute">🦠 黄豆班：身体里的“细菌大作战”</h4>
+                        <h3 class="font-cute" style="font-size: 1.15rem; font-weight: 900; color: #0284c7; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">🦠 黄豆班：身体里的“细菌大作战”</h3>
                         <p>“快用肥皂洗手洗 20 秒，把坏细菌赶跑！”我们在学校里玩模拟胃的工作、做呼吸系统模型，还用毛线缠出好玩的细菌娃娃。妈妈怀孕好辛苦，我们挺着水球大肚子体验后，都抱抱妈妈说：“谢谢您，我以后要当乖小孩，还要教全家人做好环保和垃圾分类哦！”</p>
                     </div>
 
                     <div class="story-card" style="border-color: #fbcfe8; background: #fdf2f8;">
-                        <h4 class="font-cute">🏫 芝麻班：学校真好玩，我长大了！</h4>
+                        <h3 class="font-cute" style="font-size: 1.15rem; font-weight: 900; color: #0284c7; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">🏫 芝麻班：学校真好玩，我长大了！</h3>
                         <p>刚来学校时我还会哭哭找妈妈，现在我最喜欢去喂小鱼、在沙池玩排队了！我们一起搓汤圆、滚元宵、跳竹竿舞，还学会了用“气球呼吸法”让自己不生气。每天放学都会开心地帮老师擦桌子和关水龙头，当个棒棒的“地球小超人”！</p>
                     </div>
                 </div>
@@ -172,7 +188,7 @@
 
             <!-- 2. 丰富多彩的常年活动与成长足迹 (移到故事下方) -->
             <div class="panel-box" style="background: #ffffff; border-color: #fde68a; margin-bottom: 40px;">
-                <h3 class="font-cute" style="font-size: 1.35rem; margin-bottom: 12px; color: #92400e; text-align: center;">🎪 丰富多彩的常年活动与成长足迹</h3>
+                <h2 class="font-cute" style="font-size: 1.35rem; margin-bottom: 12px; color: #92400e; text-align: center;">🎪 丰富多彩的常年活动与成长足迹</h2>
                 <p style="font-size: 1.02rem; color: #334155; line-height: 1.8; text-align: center; max-width: 950px; margin: 0 auto 25px; font-weight: 600;">
                     在种子学园，孩子们每天都沉浸在丰富多彩的探索游戏与实践活动中。无论是融入传统文化的节庆庆典、深化主题的趣味探索，还是温馨的亲子时光与隆重的毕业典礼，每一个环节都旨在激发孩子的潜能，为他们的成长留下美好而独特的印记。
                 </p>
@@ -180,7 +196,7 @@
                 <div class="activity-details-grid">
                     <!-- 卡片 1：节庆文化 -->
                     <div class="activity-sub-card">
-                        <h4 class="font-cute">🏮 节庆文化</h4>
+                        <h3 class="font-cute" style="font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🏮 节庆文化</h3>
                         <ul class="feature-list">
                             <li>融入丰富的节庆庆祝活动，引导孩子在欢乐的氛围中体验传统习俗与人文内涵。</li>
                             <li>通过互动体验与手作环节，培养包容尊重的心态，加深对多元文化的真实认知。</li>
@@ -188,7 +204,7 @@
                     </div>
                     <!-- 卡片 2：校外参观 -->
                     <div class="activity-sub-card">
-                        <h4 class="font-cute">🚌 校外参观</h4>
+                        <h3 class="font-cute" style="font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🚌 校外参观</h3>
                         <ul class="feature-list">
                             <li>结合PBL主题，组织多元的校外实地参观，让孩子走出教室亲近自然与探索真实世界。</li>
                             <li>在观察与实践中激发好奇心与求知欲，将课堂知识与生活经验完美结合。</li>
@@ -196,7 +212,7 @@
                     </div>
                     <!-- 卡片 3：毕业典礼 -->
                     <div class="activity-sub-card">
-                        <h4 class="font-cute">🎓 毕业典礼</h4>
+                        <h3 class="font-cute" style="font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🎓 毕业典礼</h3>
                         <ul class="feature-list">
                             <li>举办充满意义的毕业典礼与成长仪式，引导宝贝们制作“毕业纪念册”，记录在园期间的蜕变与精彩瞬间。</li>
                             <li>培养自信心与独立品格，为顺利迈向小学生活奠定稳固的情感与心理基础。</li>
@@ -209,7 +225,7 @@
             <div class="panel-box">
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
                     <div>
-                        <h3 class="font-cute" style="font-size: 1.4rem;">📅 四大班级课表与作息</h3>
+                        <h2 class="font-cute" style="font-size: 1.4rem;">📅 四大班级课表与作息</h2>
                         <p style="font-size: 12px; color: #64748b; font-weight: 800;">TADIKA TEMATIK CERIA TIMETABLE</p>
                     </div>
                     <div class="tabs-container" style="margin-bottom: 0;">

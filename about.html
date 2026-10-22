@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>办学特色 - 种子学园 Tadika Tematik Ceria</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- AEO 核心：办学特色结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "EducationalOrganization",
+        "name": "种子学园 Tadika Tematik Ceria",
+        "foundingDate": "1999",
+        "founder": "何智强",
+        "description": "种子学园于1999年创办，是巴生最早推行开放教育及主题教学的幼儿园，结合PBL项目式学习与大脑科学规律课程。"
+      }
+    }
+    </script>
+
     <style>
         :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -148,11 +164,11 @@
         </div>
 
         <div id="mobile-drawer" class="mobile-drawer">
-            <a href="index.html">🏠 返回首页</a>
-            <a href="about.html" style="color: #0284c7;">🌱 办学特色</a>
-            <a href="curriculum.html">📚 PBL 教学</a>
-            <a href="testimonials.html">💬 家长见证</a>
-            <a href="admission.html">🏫 入学资讯</a>
+            <a href="index.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
+            <a href="about.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
+            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="testimonials.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
+            <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
         </div>
     </header>
 
@@ -161,7 +177,7 @@
             
             <!-- 1. 创办历史背景 -->
             <div class="intro-banner">
-                <h1 class="font-cute" style="font-size: 2rem; color: #0f172a; margin-bottom: 12px;">🌱 27 年陪伴成长</h1>
+                <h1 class="font-cute" style="font-size: 2rem; color: #0f172a; margin-bottom: 12px;">🌱 种子学园办学特色：27 年陪伴成长</h1>
                 <p>
                     种子学园于 1999 年创办，至今走过二十七年岁月。许多孩子在此留下宝贵的学习经历和美好的童年。
                     种子是巴生最早推行开放教育及主题教学的幼儿园之一。

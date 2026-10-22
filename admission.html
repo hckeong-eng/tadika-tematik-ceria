@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入学资讯 - 种子学园 Tadika Tematik Ceria</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- AEO 核心：招生与机构结构化数据 (JSON-LD Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "种子学园 Tadika Tematik Ceria",
+      "description": "种子学园入学资讯与报名指南，招收 3 岁至 6 岁幼儿，提供全日班与上午班服务。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NO.14, LORONG MENGKUANG",
+        "addressLocality": "KLANG",
+        "addressRegion": "SELANGOR",
+        "postalCode": "41100",
+        "addressCountry": "MY"
+      },
+      "telephone": "+60162115349",
+      "openingHours": "Mo-Fr 07:00-18:30"
+    }
+    </script>
+
     <style>
         :root { --primary: #38bdf8; --orange: #f97316; --amber-bg: #fdfbf7; --emerald: #10b981; --slate-text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +57,6 @@
         section { padding: 60px 0; }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
         .badge { display: inline-block; padding: 6px 16px; background: #fef08a; color: #713f12; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 12px; }
-        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a; }
 
         .panel-box { background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 35px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); margin-bottom: 30px; }
         
@@ -93,113 +113,4 @@
                 <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" class="btn-orange">📝 在线报名</a>
             </div>
 
-            <button class="mobile-menu-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('open')">☰</button>
-        </div>
-
-        <div id="mobile-drawer" class="mobile-drawer">
-            <a href="index.html">🏠 返回首页</a>
-            <a href="about.html">🌱 办学特色</a>
-            <a href="curriculum.html">📚 PBL 教学</a>
-            <a href="testimonials.html">💬 家长见证</a>
-            <a href="admission.html" style="color: #0284c7;">🏫 入学资讯</a>
-        </div>
-    </header>
-
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">入学资讯</div>
-                <h2 class="font-cute">加入种子学园的轻松六步</h2>
-                <p style="color: #64748b; font-weight: 700; margin-top: 8px;">开启一段充满爱与探索的优质童年旅程</p>
-            </div>
-
-            <!-- 校园实景照片展示 -->
-            <div style="max-width: 900px; margin: 0 auto 30px; text-align: center;">
-                <img src="images/building-front-view.jpeg" alt="种子学园校园外观" style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 6px 20px rgba(0,0,0,0.04);" onerror="this.src='https://via.placeholder.com/900x360?text=种子学园校园外观';" />
-            </div>
-
-            <!-- 入学流程 -->
-            <div class="panel-box">
-                <h3 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">📋 入学流程</h3>
-                                
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-num">1</div>
-                        <h4 class="font-cute">初步了解</h4>
-                        <p>通过种子学园官方网站、Facebook 或 Instagram 专页浏览办学理念与活动点滴。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">2</div>
-                        <h4 class="font-cute">预约参观时间</h4>
-                        <p>通过电话或 WhatsApp 与我们联系，预约实地参观校园的时间。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">3</div>
-                        <h4 class="font-cute">带孩子一同参观咨询</h4>
-                        <p>亲临学园实地体验环境，与老师交流，让孩子感受温馨友善的学习氛围。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">4</div>
-                        <h4 class="font-cute">报名：填妥线上表格/转账费用</h4>
-                        <p>填写线上报名表单，并按照指引完成注册与学费转账手续。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">5</div>
-                        <h4 class="font-cute">准备孩子入学物品</h4>
-                        <p>根据园方清单为孩子准备好专属的个人学习与生活日常用品。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">6</div>
-                        <h4 class="font-cute">正式加入种子大家庭</h4>
-                        <p>开心迎接开学日，在爱与陪伴中开启快乐的校园新篇章！</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 欢迎咨询 (WhatsApp) -->
-            <div class="panel-box" style="background: linear-gradient(135deg, #f0fdf4, #e0f2fe); border-color: #bae6fd; text-align: center;">
-                <h3 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">💬 欢迎咨询</h3>
-                <p style="color: #334155; font-weight: 600; font-size: 1.05rem; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    对 2027 学年度招生、学费或课程有任何疑问吗？欢迎随时与我们联系！
-                </p>
-                <a href="https://wa.me/60162115349" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: #25D366; box-shadow: 0 4px 12px rgba(37,211,102,0.3); font-size: 16px; padding: 14px 28px;">
-                    🟢 WhatsApp 咨询：016-2115349
-                </a>
-            </div>
-
-            <!-- 底部：招生对象与作息时间 -->
-            <div class="panel-box" style="margin-bottom: 0;">
-                <h3 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">🏫 招生对象与作息时间</h3>
-            
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h4 class="font-cute">👶 招生对象</h4>
-                        <p>3 岁 － 6 岁幼儿<br>（热烈欢迎插班生咨询与加入）</p>
-                    </div>
-                    <div class="info-card" style="background: #eff6ff; border-color: #bfdbfe;">
-                        <h4 class="font-cute" style="color: #1e40af;">⏰ 服务时间</h4>
-                        <p style="color: #1e3a8a;">7.00am - 6.30pm<br>（每星期开放 5 天，公共假期休息）</p>
-                    </div>
-                    <div class="info-card" style="background: #fff7ed; border-color: #fed7aa;">
-                        <h4 class="font-cute" style="color: #c2410c;">📚 上课时间</h4>
-                        <p style="color: #9a3412;">
-                            <strong>全日班：</strong>8:30am - 5:30pm<br>
-                            <strong>上午班：</strong>8.30am - 12.30pm
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
-            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <button class="mobile-menu-btn" onclick="document.getElementById('mobile-drawer').classList.

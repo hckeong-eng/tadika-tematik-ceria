@@ -78,6 +78,9 @@
             border-radius: 18px;
             padding: 22px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .activity-sub-card h4 { font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 
@@ -162,10 +165,15 @@
                 <h1 class="font-cute" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a;"> PBL主题教学与课表</h1>
             </div>
 
-            <!-- 1. 精彩教学活动点滴 -->
+            <!-- 1. 精彩教学活动点滴 (含 100% 宽度大图) -->
             <div style="margin-bottom: 40px;">
                 <div style="text-align: center; margin-bottom: 20px;">
                     <h2 class="font-cute" style="font-size: 2.1rem; color: #0f172a; font-weight: 900;">精彩教学活动点滴</h2>
+                </div>
+
+                <!-- 需求 1：在上方加入 images/hands-on.jpeg (100% 宽度展示) -->
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <img src="images/hands-on.jpeg" alt="种子学园动手探索实践" style="width: 100%; max-height: 420px; object-fit: cover; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 6px 20px rgba(0,0,0,0.04);" onerror="this.src='https://via.placeholder.com/1100x400?text=Hands-on Learning';" />
                 </div>
                 
                 <div class="story-grid">
@@ -175,7 +183,7 @@
                             “孩子们民主票选出的《好玩的水》主题，充满了探究与欢笑！一起来看看宝贝们的精彩收获吧👇<br><br>
                             ✨ <strong>奇妙科学大探索</strong>：动手做“倒立水瓶”与“胡椒粉逃跑”观察表面张力；玩“颜色水搬家”发现毛细现象；还有“钓冰块”、水压喷泉，甚至在家长的协助下成功发射了自制“水火箭”！🚀<br><br>
                             🏆 <strong>“水的运动会”学合作</strong>：在“向后传水”、“海绵运水”和“筷子夹瓶盖”等游戏中，宝贝们手眼并用、策略分工，收获了满满的团队默契与欢笑。🤝<br><br>
-                            🌱 <strong>爱护水资源与大自然</strong>：走遍校园追踪水源、了解自来水净化过程，懂得了节约用水；还在地球日亲手揉捏“种子地球”，见证绿豆破土而出的生命力！🌱<br><br>
+                            🌱 <strong>爱护水资源与大自然</strong>：走遍校园追踪水源、了解自来水净化过程，懂得了节约用水；还在地球日亲手揉捏“种子地球”,见证绿豆破土而出的生命力！🌱<br><br>
                             在玩中学、做中悟，把好奇心变成探索世界的勇气，这就是我们的日常！
                         </p>
                     </div>
@@ -206,175 +214,4 @@
 
             <!-- 2. 丰富多彩的常年活动与成长足迹 -->
             <div class="panel-box" style="background: #ffffff; border-color: #fde68a; margin-bottom: 40px;">
-                <h2 class="font-cute" style="font-size: 1.35rem; margin-bottom: 12px; color: #92400e; text-align: center;">🎪 丰富多彩的常年活动与成长足迹</h2>
-                <p style="font-size: 1.02rem; color: #334155; line-height: 1.8; text-align: center; max-width: 950px; margin: 0 auto 25px; font-weight: 600;">
-                    在种子学园，孩子们每天都沉浸在丰富多彩的探索游戏与实践活动中。无论是融入传统文化的节庆庆典、深化主题的趣味探索，还是温馨的亲子时光与隆重的毕业典礼，每一个环节都旨在激发孩子的潜能，为他们的成长留下美好而独特的印记。
-                </p>
-
-                <div class="activity-details-grid">
-                    <!-- 卡片 1：节庆文化 -->
-                    <div class="activity-sub-card">
-                        <h3 class="font-cute" style="font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🏮 节庆文化</h3>
-                        <ul class="feature-list">
-                            <li>融入丰富的节庆庆祝活动，引导孩子在欢乐的氛围中体验传统习俗与人文内涵。</li>
-                            <li>通过互动体验与手作环节，培养包容尊重的心态，加深对多元文化的真实认知。</li>
-                        </ul>
-                    </div>
-                    <!-- 卡片 2：校外参观 -->
-                    <div class="activity-sub-card">
-                        <h3 class="font-cute" style="font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🚌 校外参观</h3>
-                        <ul class="feature-list">
-                            <li>结合PBL主题，组织多元的校外实地参观，让孩子走出教室亲近自然与探索真实世界。</li>
-                            <li>在观察与实践中激发好奇心与求知欲，将课堂知识与生活经验完美结合。</li>
-                        </ul>
-                    </div>
-                    <!-- 卡片 3：毕业典礼 -->
-                    <div class="activity-sub-card">
-                        <h3 class="font-cute" style="font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">🎓 毕业典礼</h3>
-                        <ul class="feature-list">
-                            <li>举办充满意义的毕业典礼与成长仪式，引导宝贝们制作“毕业纪念册”，记录在园期间的蜕变与精彩瞬间。</li>
-                            <li>培养自信心与独立品格，为顺利迈向小学生活奠定稳固的情感与心理基础。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. 四大班级课表与作息 (含可点击切换的页签与动态数据) -->
-            <div class="panel-box">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-                    <div>
-                        <h2 class="font-cute" style="font-size: 1.4rem;">📅 四大班级课表与作息</h2>
-                        <p style="font-size: 12px; color: #64748b; font-weight: 800;">TADIKA TEMATIK CERIA TIMETABLE</p>
-                    </div>
-                    <div class="tabs-container" style="margin-bottom: 0;">
-                        <button onclick="switchClassTab('huangdou')" id="tab-huangdou" class="tab-btn active">黄豆班</button>
-                        <button onclick="switchClassTab('hongdou')" id="tab-hongdou" class="tab-btn">红豆班</button>
-                        <button onclick="switchClassTab('lvdou')" id="tab-lvdou" class="tab-btn">绿豆班</button>
-                        <button onclick="switchClassTab('zhima')" id="tab-zhima" class="tab-btn">芝麻班</button>
-                    </div>
-                </div>
-
-                <div id="teacher-info" style="background: #fef3c7; color: #78350f; padding: 8px 14px; border-radius: 10px; font-weight: 900; font-size: 13px; display: inline-block; margin-bottom: 16px;">
-                    导师：黄汇莛师
-                </div>
-
-                <div style="overflow-x: auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 150px;">时间</th>
-                                <th>课程安排 / 活动内容</th>
-                            </tr>
-                        </thead>
-                        <tbody id="timetable-body">
-                            <!-- 页面加载时由 JavaScript 自动渲染此区域 -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- 4. 幼儿发展评估体系 (一句话描述) -->
-            <div class="panel-box" style="background: #f8fafc; margin-top: 24px; text-align: center;">
-                <h3 class="font-cute" style="font-size: 1.25rem; margin-bottom: 8px; color: #0f172a;">📊 幼儿发展评估体系</h3>
-                <p style="font-size: 0.98rem; color: #475569; font-weight: 700; margin: 0;">
-                    我们结合 KSPK国家学前课纲，建立双轨评估与成长档案，全方位记录并见证孩子的每一阶段进步。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
-            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JS 逻辑：实现四大班级课表完美渲染与动态切换 -->
-    <script>
-        const timetableData = {
-            huangdou: {
-                teacher: "黄汇莛师",
-                schedule: [
-                    { time: "8:30 - 9:30", activity: "户外活动 / 晨谈" },
-                    { time: "9:30 - 10:00", activity: "茶点" },
-                    { time: "10:00 - 11:30", activity: "综合学习活动与主题探究" },
-                    { time: "11:30 - 12:30", activity: "BM & English 语文课" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 4:00", activity: "起床 / 学习区 / 经典导读" },
-                    { time: "4:00 - 5:30", activity: "户外活动与下午茶点" }
-                ]
-            },
-            hongdou: {
-                teacher: "叶日红师",
-                schedule: [
-                    { time: "8:30 - 9:30", activity: "晨谈 / 户外活动" },
-                    { time: "9:30 - 10:00", activity: "茶点" },
-                    { time: "10:00 - 11:30", activity: "综合学习活动 / 方案探究" },
-                    { time: "11:30 - 12:30", activity: "BM & English 语文课" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 3:30", activity: "起床 / 学习区 / 经典导读" },
-                    { time: "3:30 - 5:30", activity: "户外活动 / 英语强化与茶点" }
-                ]
-            },
-            lvdou: {
-                teacher: "郑寜欣师",
-                schedule: [
-                    { time: "8:30 - 9:30", activity: "晨谈 / 学习区活动" },
-                    { time: "9:30 - 10:00", activity: "户外活动" },
-                    { time: "10:00 - 10:30", activity: "茶点" },
-                    { time: "10:30 - 12:30", activity: "BM / English / 综合学习活动" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 4:00", activity: "起床 / 户外活动 / 经典导读" },
-                    { time: "4:00 - 5:30", activity: "Minum Petang / BM 强化" }
-                ]
-            },
-            zhima: {
-                teacher: "许雅惠师",
-                schedule: [
-                    { time: "8:30 - 10:00", activity: "晨谈 / 学习区 / 户外活动" },
-                    { time: "10:00 - 10:30", activity: "茶点" },
-                    { time: "10:30 - 12:30", activity: "English / BM / 综合学习与总结" },
-                    { time: "12:30 - 2:30", activity: "午餐 / 午睡" },
-                    { time: "2:30 - 4:00", activity: "起床 / 学习区 / English" },
-                    { time: "4:00 - 5:30", activity: "茶点 / 户外活动 / 经典导读" }
-                ]
-            }
-        };
-
-        function switchClassTab(key) {
-            const data = timetableData[key];
-            if (!data) return;
-
-            // 切换按钮高亮状态
-            ['huangdou', 'hongdou', 'lvdou', 'zhima'].forEach(k => {
-                const btn = document.getElementById('tab-' + k);
-                if (btn) btn.classList.remove('active');
-            });
-            const activeBtn = document.getElementById('tab-' + key);
-            if (activeBtn) activeBtn.classList.add('active');
-            
-            // 更新导师名字
-            const teacherEl = document.getElementById('teacher-info');
-            if (teacherEl) teacherEl.innerText = `导师：${data.teacher}`;
-
-            // 渲染表格数据
-            const tbody = document.getElementById('timetable-body');
-            if (tbody) {
-                tbody.innerHTML = data.schedule.map(row => `
-                    <tr>
-                        <td style="font-weight: 900; color: #0f172a;">${row.time}</td>
-                        <td>${row.activity}</td>
-                    </tr>
-                `).join('');
-            }
-        }
-
-        // 页面初始化加载时默认显示黄豆班时间表
-        document.addEventListener("DOMContentLoaded", function() {
-            switchClassTab('huangdou');
-        });
-    </script>
-</body>
-</html>
+                <h2 class="font-cute" style="font-size: 1.35rem; margin-bottom: 12

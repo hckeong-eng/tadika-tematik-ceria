@@ -159,6 +159,11 @@
                 <span>Welcome to Tadika Tematik Ceria</span>
             </h1>
 
+            <!-- 1. 种子学园欢迎您下方、小种子之前加入豆苗萌芽图 -->
+            <div style="max-width: 820px; margin: 0 auto 30px; border-radius: 20px; overflow: hidden; border: 3px solid #fef3c7; box-shadow: 0 8px 25px rgba(0,0,0,0.06); background: white;">
+                <img src="images/hand-farmer-watering-small-beans-garden_34152-1874.webp" alt="小豆苗发芽与浇水" style="width: 100%; max-height: 420px; object-fit: cover; display: block;" onerror="this.style.display='none';" />
+            </div>
+
             <div class="intro-quote-box">
                 <h3 class="font-cute">🌱 小种子的美好开始…</h3>
                 <p>在种子学园，我们相信：每个孩子都是一颗充满无限可能的“小种子”。我们用温暖与耐心滋养他们的好奇与活力，让孩子茁壮成长，为幸福的未来扎下坚实根基。</p>
@@ -175,7 +180,7 @@
         </div>
     </section>
 
-    <!-- 核心卡片板块（含小史链接） -->
+    <!-- 核心卡片板块（含嵌入视频预览与视觉强化） -->
     <section>
         <div class="container">
             <div class="section-header">
@@ -185,24 +190,55 @@
             </div>
 
             <div class="card-grid">
-                <!-- 学园小史卡片 -->
-                <div class="panel-box">
-                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 12px; color: #0f172a;">📜 学园故事</h3>
-                    <p style="font-size: 14.5px; color: #475569; line-height: 1.7; margin-bottom: 16px;">深耕大马教育界 27 年，从最初的温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼儿园，见证无数孩子的成长。</p>
-                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                        <a href="https://youtu.be/C8eGusx8Ra0?si=vTJj38Nn7KFYTJys" target="_blank" rel="noopener noreferrer" style="font-size: 12.5px; font-weight: 700; color: #0284c7; background: #e0f2fe; padding: 6px 12px; border-radius: 8px; text-decoration: none;">🎥 观看学园视频</a>
-                        <a href="https://online.fliphtml5.com/ykvoa/mivs/#p=1" target="_blank" rel="noopener noreferrer" style="font-size: 12.5px; font-weight: 700; color: #d97706; background: #fef3c7; padding: 6px 12px; border-radius: 8px; text-decoration: none;">📖 浏览电子简介册</a>
+                <!-- 2. 学园故事卡片（内含 YouTube 嵌入视频预览与电子书快捷区） -->
+                <div class="panel-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="width: 48px; height: 48px; border-radius: 14px; background: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px;">📜</div>
+                        <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #0f172a;">学园故事与动态</h3>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.7; margin-bottom: 16px;">深耕大马教育界 27 年，从温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼儿园。</p>
+                        
+                        <!-- YouTube 视频嵌入预览 -->
+                        <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #bae6fd; background: #000;">
+                            <iframe width="100%" height="160" src="https://www.youtube.com/embed/C8eGusx8Ra0" title="种子学园介绍视频" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+                        </div>
+
+                        <!-- 电子书翻阅预览区块 -->
+                        <div style="border-radius: 12px; background: #fffbeb; padding: 12px; border: 2px solid #fde68a; text-align: center;">
+                            <div style="font-size: 13px; font-weight: 800; color: #92400e; margin-bottom: 6px;">📖 线上电子简介册</div>
+                            <a href="https://online.fliphtml5.com/ykvoa/mivs/#p=1" target="_blank" rel="noopener noreferrer" style="display: inline-block; font-size: 12.5px; font-weight: 800; color: white; background: #f59e0b; padding: 7px 14px; border-radius: 9px; text-decoration: none; box-shadow: 0 3px 10px rgba(245,158,11,0.3);">
+                                点击全屏翻阅电子书 ↗
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="panel-box">
-                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 12px; color: #0f172a;">🏡 环境设备</h3>
-                    <p style="font-size: 14.5px; color: #475569; line-height: 1.7;">拥有宽敞安全的户外草地和游乐场、通风明亮的冷气教室、小动物角落、儿童图书角及多元感官活动空间，提供最健康舒适的学习场域。</p>
+                <!-- 3. 环境设备卡片（视觉与位置优化） -->
+                <div class="panel-box" style="display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(135deg, #ffffff, #f0fdf4); border-color: #bbf7d0;">
+                    <div>
+                        <div style="width: 48px; height: 48px; border-radius: 14px; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px;">🏡</div>
+                        <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #0f172a;">环境设备</h3>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.7; margin-bottom: 16px;">拥有宽敞安全的户外草地和游乐场、通风明亮的冷气教室、小动物角落、儿童图书角及多元感官活动空间。</p>
+                        
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="font-size: 13px; color: #166534; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🌱 宽敞绿意户外草地与活动场</li>
+                            <li style="font-size: 13px; color: #166534; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">💡 明亮通风冷气互动教室</li>
+                            <li style="font-size: 13px; color: #166534; font-weight: 700; display: flex; align-items: center; gap: 6px;">📚 丰富藏书儿童图书阅览角</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="panel-box">
-                    <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 12px; color: #0f172a;">👩‍🏫 师资介绍</h3>
-                    <p style="font-size: 14.5px; color: #475569; line-height: 1.7;">资深优秀的专业幼教团队，充满爱心、耐心与专业引导力。</p>
+                <!-- 4. 师资介绍卡片（视觉与位置优化） -->
+                <div class="panel-box" style="display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(135deg, #ffffff, #fff7ed); border-color: #fed7aa;">
+                    <div>
+                        <div style="width: 48px; height: 48px; border-radius: 14px; background: #ffedd5; color: #c2410c; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px;">👩‍🏫</div>
+                        <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #0f172a;">师资介绍</h3>
+                        <p style="font-size: 14px; color: #475569; line-height: 1.7; margin-bottom: 16px;">资深优秀的专业幼教团队，充满爱心、耐心与专业引导力，陪伴孩子在快乐中自主探索与成长。</p>
+
+                        <div style="background: rgba(255,237,213,0.6); border-radius: 12px; padding: 14px; border: 1px dashed #fdba74;">
+                            <div style="font-size: 13px; font-weight: 800; color: #9a3412; margin-bottom: 4px;">✨ 我们的师资承诺</div>
+                            <p style="font-size: 12.5px; color: #7c2d12; line-height: 1.5; font-weight: 600;">以儿童为本，尊重个别差异，全面激发无限潜能与良好品格。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

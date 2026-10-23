@@ -54,8 +54,8 @@
 
         .panel-box { background: white; border-radius: 24px; border: 2px solid #e2e8f0; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); margin-bottom: 30px; }
 
-        /* 幼儿视角教案例卡片样式 */
-        .story-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
+        /* 幼儿视角教案例卡片样式 (上下垂直流式布局，保证图片完整展示) */
+        .story-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 20px; }
         @media(min-width: 1024px) { .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         .story-card {
             background: #ffffff;
@@ -63,42 +63,25 @@
             border-radius: 20px;
             padding: 24px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .story-card h3 { font-size: 1.15rem; font-weight: 900; color: #0284c7; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .story-card h3 { font-size: 1.15rem; font-weight: 900; color: #0284c7; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .story-text-area { font-size: 0.95rem; color: #334155; font-weight: 600; line-height: 1.7; margin-bottom: 18px; }
         
-        .story-content-layout {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .story-text-area { font-size: 0.95rem; color: #334155; font-weight: 600; line-height: 1.7; }
-        
-        /* 手机端图片区域 */
-        .story-img-area { width: 100%; }
+        /* PBL 故事图片：宽度100%，高度自动适应，保证永不裁切、人像完整 */
+        .story-img-area { width: 100%; margin-top: auto; }
         .story-img-area img {
             width: 100%;
-            height: 240px;
-            object-fit: cover;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
             border-radius: 14px;
             border: 2px solid #e2e8f0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            background: #f8fafc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             display: block;
-        }
-
-        /* 电脑端优化：拓宽图片宽度（280px），保证画幅与人像完整 */
-        @media(min-width: 640px) {
-            .story-content-layout {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .story-text-area { flex: 1; }
-            .story-img-area { width: 280px; flex-shrink: 0; }
-            .story-img-area img { height: 260px; }
         }
 
         /* 常年活动详情三小栏样式 */
@@ -116,20 +99,16 @@
         }
         .activity-sub-card h4 { font-size: 1.1rem; font-weight: 900; color: #92400e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
         
-        /* 手机端加大常年活动照片尺寸 (给到 260px 高度) */
+        /* 常年活动三张照片：采用响应式 aspect-ratio 比例，手机端自动变宽饱满 */
         .activity-sub-card img {
             width: 100%;
-            height: 260px;
+            aspect-ratio: 16/10;
             object-fit: cover;
             border-radius: 12px;
             border: 2px solid #fef3c7;
             box-shadow: 0 4px 10px rgba(0,0,0,0.03);
             display: block;
-        }
-        @media(min-width: 768px) {
-            .activity-sub-card img {
-                height: 180px;
-            }
+            margin-top: 15px;
         }
 
         /* Point Form 列表样式 */
@@ -224,10 +203,10 @@
                 </div>
                      
                 <div class="story-grid">
-                    <!-- 卡片 1：好玩的水 + images/water rocket.jpeg -->
+                    <!-- 卡片 1：好玩的水 + images/water rocket.jpeg (图在文字下方，完整展示) -->
                     <div class="story-card" style="border-color: #bae6fd; background: #f0f9ff;">
-                        <h3 class="font-cute">⛵ 好玩的水——小小科学家的奇妙世界</h3>
-                        <div class="story-content-layout">
+                        <div>
+                            <h3 class="font-cute">⛵ 好玩的水——小小科学家的奇妙世界</h3>
                             <div class="story-text-area">
                                 “孩子们民主票选出的《好玩的水》主题，充满了探究与欢笑！一起来看看宝贝们的精彩收获吧👇<br><br>
                                 ✨ <strong>奇妙科学大探索</strong>：动手做“倒立水瓶”与“胡椒粉逃跑”观察表面张力；玩“颜色水搬家”发现毛细现象；还有“钓冰块”、水压喷泉，甚至在家长的协助下成功发射了自制“水火箭”！🚀<br><br>
@@ -235,25 +214,25 @@
                                 🌱 <strong>爱护水资源与大自然</strong>：走遍校园追踪水源、了解自来水净化过程，懂得了节约用水；还在地球日亲手揉捏“种子地球”，见证绿豆破土而出的生命力！🌱<br><br>
                                 在玩中学、做中悟，把好奇心变成探索世界的勇气，这就是我们的日常！
                             </div>
-                            <div class="story-img-area">
-                                <img src="images/water rocket.jpeg" alt="好玩的水 - 水火箭探索" onerror="this.style.display='none';" />
-                            </div>
+                        </div>
+                        <div class="story-img-area">
+                            <img src="images/water rocket.jpeg" alt="好玩的水 - 水火箭探索" onerror="this.style.display='none';" />
                         </div>
                     </div>
 
-                    <!-- 卡片 2：星级厨房 + images/cooking.jpeg -->
+                    <!-- 卡片 2：星级厨房 + images/cooking.jpeg (图在文字下方，完整展示) -->
                     <div class="story-card" style="border-color: #fed7aa; background: #fff7ed;">
-                        <h3 class="font-cute">🍪 孩子们的星级厨房：当巧克力遇上手抓饼！</h3>
-                        <div class="story-content-layout">
+                        <div>
+                            <h3 class="font-cute">🍪 孩子们的星级厨房：当巧克力遇上手抓饼！</h3>
                             <div class="story-text-area">
                                 “这个月，学园的空气里满是幸福的味道！孩子们开启了一场味蕾与科学交织的烘焙之旅。<br><br>
                                 🍪 <strong>Famous Amos 挑战</strong>：从精准秤量面粉、黑糖到观察“糖油混合”的神奇变化，孩子们像严谨的实验员一样完成了高难度的巧克力曲奇制作。经过 24 小时的耐心冷藏，饼干在烤箱里膨胀上色，那股浓郁的香气让全班都沸腾了。最让老师感动的是，大家还通过数学点算，确保每位师生都能分享到这份亲手制作的甜蜜。<br><br>
                                 🍕 <strong>手抓饼 Pizza 创意</strong>：谁说披萨很难做？孩子们用手抓饼当底，熟练地卷起边圈、刷上番茄酱，再大方铺满自己挑选的蘑菇、香肠和芝士。看着乳酪在烤箱里滋滋融化，每一口吃下去都是满满的成就感，大家直呼“真的很好吃！”<br><br>
                                 在揉捏与等待中，孩子们不仅学会了烹饪，更在数学统计、科学观察与分享美德中悄悄成长。教育，原来可以这么好玩又好吃！✨”
                             </div>
-                            <div class="story-img-area">
-                                <img src="images/cooking.jpeg" alt="星级厨房 - 烘焙体验" onerror="this.style.display='none';" />
-                            </div>
+                        </div>
+                        <div class="story-img-area">
+                            <img src="images/cooking.jpeg" alt="星级厨房 - 烘焙体验" onerror="this.style.display='none';" />
                         </div>
                     </div>
                 </div>
@@ -288,7 +267,7 @@
                                 <li>通过互动体验与手作环节，培养包容尊重的心态，加深对多元文化的真实认知。</li>
                             </ul>
                         </div>
-                        <div style="margin-top: 15px; text-align: center;">
+                        <div>
                             <img src="images/lion-dance.jpeg" alt="节庆文化 - 舞狮" onerror="this.src='https://via.placeholder.com/400x200?text=Lion+Dance';" />
                         </div>
                     </div>
@@ -302,7 +281,7 @@
                                 <li>在观察与实践中激发好奇心与求知欲，将课堂知识与生活经验完美结合。</li>
                             </ul>
                         </div>
-                        <div style="margin-top: 15px; text-align: center;">
+                        <div>
                             <img src="images/pusat-sains-negara-trip.jpg" alt="校外参观 - 国家科学馆" onerror="this.src='https://via.placeholder.com/400x200?text=Science+Trip';" />
                         </div>
                     </div>
@@ -316,7 +295,7 @@
                                 <li>培养自信心与独立品格，为顺利迈向小学生活奠定稳固的情感与心理基础。</li>
                             </ul>
                         </div>
-                        <div style="margin-top: 15px; text-align: center;">
+                        <div>
                             <img src="images/graduation.jpg" alt="毕业典礼与成长仪式" onerror="this.src='https://via.placeholder.com/400x200?text=Graduation';" />
                         </div>
                     </div>

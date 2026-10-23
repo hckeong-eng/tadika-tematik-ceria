@@ -88,6 +88,9 @@
             border: 2px solid #e2e8f0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .feature-card:hover { transform: translateY(-4px); }
         .card-icon {
@@ -102,6 +105,28 @@
         }
         .feature-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
         
+        .card-content-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        @media(min-width: 640px) {
+            .card-content-layout {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .card-text-area { flex: 1; }
+            .card-img-area { width: 140px; flex-shrink: 0; }
+        }
+        .card-img-area img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 2px solid #f1f5f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
         /* 列表样式的卡片内文 */
         .feature-list {
             list-style: none;
@@ -182,6 +207,10 @@
                     种子学园于 1999 年创办，至今走过二十七年岁月。许多孩子在此留下宝贵的学习经历和美好的童年。
                     种子是巴生最早推行开放教育及主题教学的幼儿园之一。
                 </p>
+                <!-- 100% 宽度大图 -->
+                <div style="margin-top: 24px;">
+                    <img src="images/Hoo with kids-edited.jpg" alt="园长与孩子们" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 18px; border: 2px solid #bae6fd; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" onerror="this.style.display='none';" />
+                </div>
             </div>
 
             <!-- 2. 创办人何智强园长的话 -->
@@ -203,42 +232,78 @@
                 
                 <!-- 卡片 1：弹性着装和学习自主 -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #e0f2fe; color: #0284c7;">👕</div>
-                    <h3 class="font-cute">弹性着装和学习自主</h3>
-                    <ul class="feature-list">
-                        <li>学生可自由选择上学服装，结合充足的游戏时间，充分展现个性与创造力。</li>
-                        <li>通过班级主题讨论与投票机制，赋予孩子充分的学习自主权，引导他们成为学习的主人。</li>
-                    </ul>
+                    <div>
+                        <div class="card-icon" style="background: #e0f2fe; color: #0284c7;">👕</div>
+                        <h3 class="font-cute">弹性着装和学习自主</h3>
+                        <div class="card-content-layout">
+                            <div class="card-text-area">
+                                <ul class="feature-list">
+                                    <li>学生可自由选择上学服装，结合充足的游戏时间，充分展现个性与创造力。</li>
+                                    <li>通过班级主题讨论与投票机制，赋予孩子充分的学习自主权，引导他们成为学习的主人。</li>
+                                </ul>
+                            </div>
+                            <div class="card-img-area">
+                                <img src="images/Eager Hands in discussion.png" alt="弹性着装和学习自主" onerror="this.style.display='none';" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 卡片 2：多元化课程体系 -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #d1fae5; color: #059669;">🧠</div>
-                    <h3 class="font-cute">多元化课程体系</h3>
-                    <ul class="feature-list">
-                        <li>遵循大脑科学规律并结合全球幼教精髓，紧贴国家 KSPK 课程纲要，涵盖华国英三语与中华经典导读。</li>
-                        <li>注重均衡体能与生活自理教育，六岁班设幼小衔接课程，全方位培育孩子的独立品格与全面潜能。</li>
-                    </ul>
+                    <div>
+                        <div class="card-icon" style="background: #d1fae5; color: #059669;">🧠</div>
+                        <h3 class="font-cute">多元化课程体系</h3>
+                        <div class="card-content-layout">
+                            <div class="card-text-area">
+                                <ul class="feature-list">
+                                    <li>遵循大脑科学规律并结合全球幼教精髓，紧贴国家 KSPK 课程纲要，涵盖华国英三语与中华经典导读。</li>
+                                    <li>注重均衡体能与生活自理教育，六岁班设幼小衔接课程，全方位培育孩子的独立品格与全面潜能。</li>
+                                </ul>
+                            </div>
+                            <div class="card-img-area">
+                                <img src="images/holistic program.jpg" alt="多元化课程体系" onerror="this.style.display='none';" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 卡片 3：PBL 主题专案教学 -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #fef3c7; color: #d97706;">💡</div>
-                    <h3 class="font-cute">PBL 主题专案教学</h3>
-                    <ul class="feature-list">
-                        <li>师生共同讨论并投票选出喜爱的探究主题，转化成班级深度专案课程，全面激发内在学习动力。</li>
-                        <li>在动手实践与互动体验中萌发探索精神，让学习过程充满乐趣与主动思考的成就感。</li>
-                    </ul>
+                    <div>
+                        <div class="card-icon" style="background: #fef3c7; color: #d97706;">💡</div>
+                        <h3 class="font-cute">PBL 主题专案教学</h3>
+                        <div class="card-content-layout">
+                            <div class="card-text-area">
+                                <ul class="feature-list">
+                                    <li>师生共同讨论并投票选出喜爱的探究主题，转化成班级深度专案课程，全面激发内在学习动力。</li>
+                                    <li>在动手实践与互动体验中萌发探索精神，让学习过程充满乐趣与主动思考的成就感。</li>
+                                </ul>
+                            </div>
+                            <div class="card-img-area">
+                                <img src="images/science experiment.jpeg" alt="PBL 主题专案教学" onerror="this.style.display='none';" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 卡片 4：家园合作 -->
                 <div class="feature-card">
-                    <div class="card-icon" style="background: #fce7f3; color: #db2777;">🤝</div>
-                    <h3 class="font-cute">家园合作</h3>
-                    <ul class="feature-list">
-                        <li>提供专业亲子教养咨询与一对一亲师交流约谈，建立密切透明的家园沟通桥梁。</li>
-                        <li>举办年度亲子家庭日并鼓励家长深度参与教学，共同营造温馨相伴的教育成长环境。</li>
-                    </ul>
+                    <div>
+                        <div class="card-icon" style="background: #fce7f3; color: #db2777;">🤝</div>
+                        <h3 class="font-cute">家园合作</h3>
+                        <div class="card-content-layout">
+                            <div class="card-text-area">
+                                <ul class="feature-list">
+                                    <li>提供专业亲子教养咨询与一对一亲师交流约谈，建立密切透明的家园沟通桥梁。</li>
+                                    <li>举办年度亲子家庭日并鼓励家长深度参与教学，共同营造温馨相伴的教育成长环境。</li>
+                                </ul>
+                            </div>
+                            <div class="card-img-area">
+                                <img src="images/parents involvement.jpeg" alt="家园合作" onerror="this.style.display='none';" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

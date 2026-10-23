@@ -110,21 +110,31 @@
             flex-direction: column;
             gap: 16px;
         }
+        
+        /* 默认手机端：图片独占一行，高度给到 200px 保证完整不遮挡人像 */
+        .card-img-area {
+            width: 100%;
+        }
+        .card-img-area img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 2px solid #f1f5f9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        /* 电脑/平板等较大屏幕（>640px）：图片放右侧（宽度 150px），高度比例自适应 */
         @media(min-width: 640px) {
             .card-content-layout {
                 flex-direction: row;
                 align-items: flex-start;
             }
             .card-text-area { flex: 1; }
-            .card-img-area { width: 140px; flex-shrink: 0; }
-        }
-        .card-img-area img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 14px;
-            border: 2px solid #f1f5f9;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            .card-img-area { width: 150px; flex-shrink: 0; }
+            .card-img-area img {
+                height: 130px;
+            }
         }
 
         /* 列表样式的卡片内文 */

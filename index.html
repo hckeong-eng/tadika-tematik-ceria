@@ -137,6 +137,11 @@
         @media(min-width: 1000px) { .header-tools { display: none; } }
         .lang-switch { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 12px; border: 1px solid #cbd5e1; color: #0f172a; text-decoration: none; font-weight: 800; font-size: 14px; font-family: 'Fredoka', sans-serif; }
         nav.desktop-nav a.nav-en { border: 1px solid #cbd5e1; font-family: 'Fredoka', sans-serif; }
+        .yt-facade { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; cursor: pointer; background: #000; }
+        .yt-facade img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9; }
+        .yt-play { position: absolute; left: 50%; top: 50%; width: 64px; height: 44px; margin: -22px 0 0 -32px; background: #ff0000; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.35); }
+        .yt-play::after { content: ""; position: absolute; left: 26px; top: 13px; border-style: solid; border-width: 9px 0 9px 15px; border-color: transparent transparent transparent #fff; }
+        .yt-facade:hover .yt-play { background: #cc0000; }
         /* WhatsApp 浮动按钮 */
         .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 200; display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 800; font-size: 15px; padding: 12px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
         .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
@@ -199,8 +204,6 @@
     <!-- Hero 核心区域 -->
     <section class="hero">
         <div class="container">
-            <div style="display:inline-block; padding: 6px 16px; background:#fef08a; color:#713f12; border-radius:50px; font-weight:800; font-size:13px; margin-bottom:16px;">🌱 欢迎来到种子学园 Tadika Tematik Ceria</div>
-            
             <h1 class="font-cute">
                 种子学园欢迎您
                 <span>Welcome to Tadika Tematik Ceria</span>
@@ -244,8 +247,11 @@
                         <p style="font-size: 15.5px; color: #475569; line-height: 1.7; margin-bottom: 16px;">自 1999 年创办以来深耕幼儿教育，从温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼儿园。</p>
                         
                         <!-- YouTube 视频嵌入预览 -->
-                        <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #bae6fd; background: #000;">
-                            <iframe width="100%" height="160" src="https://www.youtube.com/embed/C8eGusx8Ra0" title="种子学园介绍视频" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+                        <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #bae6fd; background: #000; aspect-ratio: 16 / 9;">
+                            <button type="button" class="yt-facade" onclick="playYT(this)" aria-label="播放种子学园介绍视频">
+                                <img loading="lazy" src="https://i.ytimg.com/vi/C8eGusx8Ra0/hqdefault.jpg" alt="种子学园介绍视频封面" onerror="this.style.display='none';" />
+                                <span class="yt-play" aria-hidden="true"></span>
+                            </button>
                         </div>
 
                        <!-- 电子书翻阅预览区块 -->
@@ -381,12 +387,24 @@
                 </div>
             </div>
             <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
-            <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
+            <p>温馨亲子，开创学习 &nbsp;|&nbsp; 陪每颗小种子扎根成长</p>
             <p style="margin-top: 16px; font-size: 12.5px; color: #cbd5e1; font-weight: 700;">🏛️ 教育部（KPM）注册幼儿园 · 注册编号 B5A0283</p>
-            <p style="margin-top: 12px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
+            <p style="margin-top: 12px; font-size: 11px; color: #64748b;">&copy; 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
         </div>
     </footer>
 
+
+    <script>
+    function playYT(btn) {
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/C8eGusx8Ra0?autoplay=1&rel=0';
+        f.title = '种子学园介绍视频';
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        f.allowFullscreen = true;
+        f.style.cssText = 'width:100%;height:100%;border:0;display:block;';
+        btn.replaceWith(f);
+    }
+    </script>
 
     <!-- WhatsApp 浮动按钮 -->
     <a href="https://wa.me/60162115349" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 咨询">

@@ -165,6 +165,10 @@
         .pbl-step h3 { font-size: 1.05rem; font-weight: 900; color: #0369a1; margin: 8px 0 6px; }
         .pbl-step p { font-size: 0.93rem; color: #334155; line-height: 1.6; font-weight: 600; }
         .pbl-num { width: 32px; height: 32px; border-radius: 50%; background: #0284c7; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+        .header-tools { display: flex; align-items: center; gap: 8px; }
+        @media(min-width: 1000px) { .header-tools { display: none; } }
+        .lang-switch { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 12px; border: 1px solid #cbd5e1; color: #0f172a; text-decoration: none; font-weight: 800; font-size: 14px; font-family: 'Fredoka', sans-serif; }
+        nav.desktop-nav a.nav-en { border: 1px solid #cbd5e1; font-family: 'Fredoka', sans-serif; }
         /* WhatsApp 浮动按钮 */
         .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 200; display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 800; font-size: 15px; padding: 12px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
         .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
@@ -193,13 +197,17 @@
                 <a href="curriculum.html" class="active">课程与活动</a>
                 <a href="testimonials.html">家长见证</a>
                 <a href="admission.html">入学资讯</a>
+                <a href="en/index.html" class="nav-en" lang="en" hreflang="en">English</a>
             </nav>
 
             <div class="header-right">
                 <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" class="btn-orange">📝 在线报名</a>
             </div>
 
-            <button class="mobile-menu-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('open')">☰</button>
+            <div class="header-tools">
+                <a href="en/index.html" class="lang-switch" lang="en" hreflang="en">EN</a>
+                <button class="mobile-menu-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('open')">☰</button>
+            </div>
         </div>
 
         <div id="mobile-drawer" class="mobile-drawer">
@@ -208,6 +216,7 @@
             <a href="curriculum.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 课程与活动</a>
             <a href="testimonials.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
             <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
+            <a href="en/index.html" lang="en" hreflang="en">🌐 English</a>
         </div>
     </header>
 

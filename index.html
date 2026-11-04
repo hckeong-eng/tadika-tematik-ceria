@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>种子学园 Tadika Tematik Ceria - 官方首页</title>
+    <meta name="description" content="种子学园 Tadika Tematik Ceria，1999 年创办于雪州巴生的幼儿园，以 PBL 主题探究教学、三语课程和自然庭院环境陪伴 3-6 岁幼儿成长。2027 学年报名现已开放。">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- 社交分享预览（WhatsApp / Facebook）。上线前把 YOUR-DOMAIN.com 换成正式域名 -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="种子学园 Tadika Tematik Ceria">
+    <meta property="og:title" content="种子学园 Tadika Tematik Ceria｜巴生幼儿园">
+    <meta property="og:description" content="种子学园 Tadika Tematik Ceria，1999 年创办于雪州巴生的幼儿园，以 PBL 主题探究教学、三语课程和自然庭院环境陪伴 3-6 岁幼儿成长。2027 学年报名现已开放。">
+    <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+    <meta property="og:image" content="https://YOUR-DOMAIN.com/images/building-front-view.jpeg">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- AEO 核心：机构结构化数据 (JSON-LD Schema) -->
@@ -13,7 +26,8 @@
       "@type": "Preschool",
       "name": "种子学园 Tadika Tematik Ceria",
       "alternateName": "种子学园",
-      "description": "深耕大马雪州巴生二十多年的优质幼儿园，注重方案探究（PBL）与全面素质发展，招收 3-6 岁幼儿。",
+      "foundingDate": "1999",
+      "description": "1999 年创办于雪州巴生的幼儿园，注重方案探究（PBL）与全面素质发展，招收 3-6 岁幼儿。",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "NO.14, LORONG MENGKUANG",
@@ -114,6 +128,14 @@
 
         footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
         footer p { color: #94a3b8; font-size: 0.9rem; margin-top: 12px; }
+
+        .team-photos { display: flex; flex-direction: column; gap: 10px; }
+        .team-photos img { width: 100%; height: auto; border-radius: 12px; border: 2px solid #fed7aa; display: block; }
+        /* WhatsApp 浮动按钮 */
+        .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 200; display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 800; font-size: 15px; padding: 12px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+        .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
+        @media(max-width: 639px) { .wa-float span { display: none; } .wa-float { padding: 14px; } footer { padding-bottom: 90px; } }
+        a.tel-link { color: inherit; text-decoration: underline; text-decoration-color: #cbd5e1; text-underline-offset: 3px; }
     </style>
 </head>
 <body>
@@ -135,7 +157,7 @@
             <nav class="desktop-nav">
                 <a href="index.html" class="active">首页</a>
                 <a href="about.html">办学特色</a>
-                <a href="curriculum.html">PBL 教学</a>
+                <a href="curriculum.html">课程与活动</a>
                 <a href="testimonials.html">家长见证</a>
                 <a href="admission.html">入学资讯</a>
             </nav>
@@ -156,7 +178,7 @@
         <div id="mobile-drawer" class="mobile-drawer">
             <a href="index.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
             <a href="about.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
-            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 课程与活动</a>
             <a href="testimonials.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
             <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
             <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" style="background: #f97316; color: white; text-align: center; border-radius: 12px; margin-top: 10px;">📝 立即报名 2027 学年</a>
@@ -174,7 +196,7 @@
             </h1>
 
             <div style="max-width: 820px; margin: 0 auto 30px; border-radius: 20px; overflow: hidden; border: 3px solid #fef3c7; box-shadow: 0 8px 25px rgba(0,0,0,0.06); background: white;">
-                <img src="images/hand-farmer-watering-small-beans-garden_34152-1874.webp" alt="小豆苗发芽与浇水" style="width: 100%; max-height: 420px; object-fit: cover; display: block;" onerror="this.style.display='none';" />
+                <img fetchpriority="high" src="images/home-hero.jpg" alt="孩子们在学园庭院的原木游乐场旁动手画画" style="width: 100%; max-height: 420px; object-fit: cover; object-position: center 65%; display: block;" onerror="this.style.display='none';" />
             </div>
 
             <div class="intro-quote-box">
@@ -184,10 +206,10 @@
 
             <div class="reg-callout font-cute">
                 <div style="font-size: 1.35rem; font-weight: 900; margin-bottom: 8px;">📢 2027 学年度新生报名现已开放！</div>
-                <p style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 20px;">欢迎浏览各专页了解办学特色和课程。名额有限，联系我们或提交在线报名表。</p>
+                <p style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 20px;">接受 <strong>2021 – 2024 年出生</strong>的幼儿报读。名额有限，欢迎 WhatsApp 索取收费表或直接提交在线报名表。</p>
                 <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
                     <a href="https://forms.gle/eCsNJC6EfggvENU29" target="_blank" rel="noopener noreferrer" style="background: white; color: #ea580c; padding: 12px 24px; border-radius: 14px; font-weight: 900; text-decoration: none;">📝 填写 2027 新生报名表</a>
-                    <a href="about.html" style="background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; border-radius: 14px; font-weight: 900; text-decoration: none; border: 1px solid white;">了解办学特色</a>
+                    <a href="https://wa.me/60162115349?text=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%B4%A2%E5%8F%96%E7%A7%8D%E5%AD%90%E5%AD%A6%E5%9B%AD%202027%20%E5%AD%A6%E5%B9%B4%E6%94%B6%E8%B4%B9%E8%A1%A8%E3%80%82%E5%AD%A9%E5%AD%90%E5%87%BA%E7%94%9F%E5%B9%B4%E4%BB%BD%EF%BC%9A" target="_blank" rel="noopener noreferrer" style="background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; border-radius: 14px; font-weight: 900; text-decoration: none; border: 1px solid white;">💬 WhatsApp 索取收费表</a>
                 </div>
             </div>
         </div>
@@ -208,7 +230,7 @@
                     <div>
                         <div style="width: 48px; height: 48px; border-radius: 14px; background: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px;">📜</div>
                         <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #0f172a;">学园故事</h3>
-                        <p style="font-size: 15.5px; color: #475569; line-height: 1.7; margin-bottom: 16px;">深耕大马教育界二十多年，从温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼儿园。</p>
+                        <p style="font-size: 15.5px; color: #475569; line-height: 1.7; margin-bottom: 16px;">自 1999 年创办以来深耕幼儿教育，从温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼儿园。</p>
                         
                         <!-- YouTube 视频嵌入预览 -->
                         <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #bae6fd; background: #000;">
@@ -236,7 +258,7 @@
                         
                         <!-- 照片预览区域 -->
                         <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #bbf7d0; background: #000;">
-                            <img src="images/woodenplayground.jpg" alt="原木游乐场照片" style="width: 100%; height: 160px; object-fit: cover; display: block;" onerror="this.style.display='none';" />
+                            <img loading="lazy" decoding="async" src="images/building-front-view.jpeg" alt="种子学园双层独立式校舍外观" style="width: 100%; height: 160px; object-fit: cover; display: block;" onerror="this.style.display='none';" />
                         </div>
 
                         <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 14px;">
@@ -263,37 +285,22 @@
         <div style="width: 48px; height: 48px; border-radius: 14px; background: #ffedd5; color: #c2410c; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px;">👩‍🏫</div>
         <h3 class="font-cute" style="font-size: 1.3rem; margin-bottom: 10px; color: #0f172a;">教学团队</h3>
         
+        <div style="background: rgba(255,255,255,0.85); padding: 9px 12px; border-radius: 10px; border: 1px solid #fed7aa; color: #7c2d12; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+            👑 <strong>园长：</strong>何智强　｜　<strong>副园长：</strong>黄惠萍
+        </div>
         <p style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 14px;">
             拥有<strong>教学经验超过十年</strong>的资深幼教团队，充满爱心、耐心与专业引导力，陪伴孩子在快乐中自主探索与成长。
         </p>
 
-        <!-- 详细老师名单列表 -->
-        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; margin-bottom: 16px;">
-            <div style="background: rgba(255,255,255,0.85); padding: 8px 12px; border-radius: 10px; border: 1px solid #fed7aa; color: #7c2d12; line-height: 1.5;">
-                👑 <strong>行政领导：</strong>何智强园长、黄惠萍副园长
-            </div>
-            <div style="background: rgba(255,255,255,0.85); padding: 8px 12px; border-radius: 10px; border: 1px solid #fde68a; color: #78350f; line-height: 1.5;">
-                🌱 <strong>各年龄班导师：</strong>黄汇莛师、叶日红师、郑寜欣师、许雅惠师
-            </div>
-            <div style="background: rgba(255,255,255,0.85); padding: 8px 12px; border-radius: 10px; border: 1px solid #bae6fd; color: #0369a1; line-height: 1.5;">
-                🗣️ <strong>语言专任：</strong>Cikgu Karen（国文）、杨洁盈 Teacher Yeong（英文）
-            </div>
-            <div style="background: rgba(255,255,255,0.85); padding: 8px 12px; border-radius: 10px; border: 1px solid #dcfce7; color: #14532d; line-height: 1.5;">
-                🤝 <strong>助理教师：</strong>杨秄沂师、叶日萍师、何彩萍师
-            </div>
-        </div>
-
-        <!-- 师资合照位置（移至文字与名单下方） -->
-        <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #fed7aa; background: #000;">
-            <img src="images/all-staff.jpg" alt="种子学园全体教职人员合照" style="width: 100%; height: 160px; object-fit: cover; display: block;" onerror="this.style.display='none';" />
-        </div>
-
-        <div style="background: rgba(255,237,213,0.6); border-radius: 12px; padding: 12px; border: 1px dashed #fdba74;">
-            <div style="font-size: 13.5px; font-weight: 800; color: #9a3412; margin-bottom: 2px;">✨ 我们的师资承诺</div>
-            <p style="font-size: 13px; color: #7c2d12; line-height: 1.5; font-weight: 600;">以儿童为本，尊重个别差异，全面激发无限潜能与良好品格。</p>
+        <!-- 师生互动照片：上下排列 -->
+        <div class="team-photos">
+            <img loading="lazy" decoding="async" src="images/team-collage.jpg" alt="老师们带孩子观察、讲故事和校外参观的活动照片" />
+            <img loading="lazy" decoding="async" src="images/team-museum.jpg" alt="两位老师带着孩子们在博物馆观看展品" />
         </div>
     </div>
 </div>
+            </div>
+        </div>
     </section>
 
     <!-- 联系我们与预约板块 -->
@@ -309,7 +316,7 @@
                 <div style="display: grid; grid-template-columns: 1fr; gap: 22px; font-size: 15px; color: #334155;">
                     <div>
                         <strong style="color: #0f172a; font-size: 1.05rem;">📞 电话：</strong><br>
-                        <span style="color: #475569;">016-2115349（何园长） &nbsp;|&nbsp; 016-2115467（黄副园长）</span>
+                        <span style="color: #475569;"><a href="tel:+60162115349" class="tel-link">016-2115349</a>（何园长） &nbsp;|&nbsp; <a href="tel:+60162115467" class="tel-link">016-2115467</a>（黄副园长）</span>
                     </div>
                     <div>
                         <strong style="color: #0f172a; font-size: 1.05rem;">✉️ Email：</strong><br>
@@ -364,9 +371,16 @@
             </div>
             <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
             <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
+            <p style="margin-top: 16px; font-size: 12.5px; color: #cbd5e1; font-weight: 700;">🏛️ 教育部（KPM）注册幼儿园 · 注册编号 B5A0283</p>
+            <p style="margin-top: 12px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
         </div>
     </footer>
 
+
+    <!-- WhatsApp 浮动按钮 -->
+    <a href="https://wa.me/60162115349" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 咨询">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></svg>
+        <span>WhatsApp 咨询</span>
+    </a>
 </body>
 </html>

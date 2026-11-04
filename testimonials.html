@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>家长见证 - 种子学园 Tadika Tematik Ceria</title>
+    <meta name="description" content="听听巴生家长怎么说：种子学园家长见证与 Google 评价。">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- 社交分享预览（WhatsApp / Facebook）。上线前把 YOUR-DOMAIN.com 换成正式域名 -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="种子学园 Tadika Tematik Ceria">
+    <meta property="og:title" content="家长见证｜种子学园 Tadika Tematik Ceria">
+    <meta property="og:description" content="听听巴生家长怎么说：种子学园家长见证与 Google 评价。">
+    <meta property="og:url" content="https://YOUR-DOMAIN.com/testimonials.html">
+    <meta property="og:image" content="https://YOUR-DOMAIN.com/images/building-front-view.jpeg">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- AEO 核心：家长评价结构化数据 (Schema Review) -->
@@ -103,6 +116,12 @@
 
         footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
         footer p { color: #94a3b8; font-size: 0.9rem; margin-top: 12px; }
+
+        /* WhatsApp 浮动按钮 */
+        .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 200; display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 800; font-size: 15px; padding: 12px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+        .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
+        @media(max-width: 639px) { .wa-float span { display: none; } .wa-float { padding: 14px; } footer { padding-bottom: 90px; } }
+        a.tel-link { color: inherit; text-decoration: underline; text-decoration-color: #cbd5e1; text-underline-offset: 3px; }
     </style>
 </head>
 <body>
@@ -123,7 +142,7 @@
             <nav class="desktop-nav">
                 <a href="index.html">首页</a>
                 <a href="about.html">办学特色</a>
-                <a href="curriculum.html">PBL 教学</a>
+                <a href="curriculum.html">课程与活动</a>
                 <a href="testimonials.html" class="active">家长见证</a>
                 <a href="admission.html">入学资讯</a>
             </nav>
@@ -138,7 +157,7 @@
         <div id="mobile-drawer" class="mobile-drawer">
             <a href="index.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
             <a href="about.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
-            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 课程与活动</a>
             <a href="testimonials.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
             <a href="admission.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
         </div>
@@ -162,7 +181,7 @@
                     </div>
                     <div class="parent-info">
                         <span class="parent-name">周小慧医生</span>
-                        <span class="parent-tag">缮潾, 禠羱妈妈</span>
+                        <span class="parent-tag">两个孩子的妈妈</span>
                     </div>
                 </div>
 
@@ -174,7 +193,7 @@
                     </div>
                     <div class="parent-info">
                         <span class="parent-name">杨斯兰</span>
-                        <span class="parent-tag">汶萱, 汶蔚妈妈</span>
+                        <span class="parent-tag">两个孩子的妈妈</span>
                     </div>
                 </div>
 
@@ -186,7 +205,7 @@
                     </div>
                     <div class="parent-info">
                         <span class="parent-name">陈丽红老师</span>
-                        <span class="parent-tag">乐靖, 沁恩妈妈</span>
+                        <span class="parent-tag">两个孩子的妈妈</span>
                     </div>
                 </div>
 
@@ -198,7 +217,7 @@
                     </div>
                     <div class="parent-info">
                         <span class="parent-name">黄梅瑛老师</span>
-                        <span class="parent-tag">廖迅, 廖远, 廖迦妈妈</span>
+                        <span class="parent-tag">三个孩子的妈妈</span>
                     </div>
                 </div>
 
@@ -210,7 +229,7 @@
                     </div>
                     <div class="parent-info">
                         <span class="parent-name">郑雪俐</span>
-                        <span class="parent-tag">恺俊, 颖希妈妈</span>
+                        <span class="parent-tag">两个孩子的妈妈</span>
                     </div>
                 </div>
 
@@ -222,7 +241,7 @@
                     </div>
                     <div class="parent-info">
                         <span class="parent-name">汤爱妮</span>
-                        <span class="parent-tag">奕宁, 奕翔, 奕宸妈妈</span>
+                        <span class="parent-tag">三个孩子的妈妈</span>
                     </div>
                 </div>
 
@@ -234,7 +253,7 @@
                 <p style="font-size: 1.025rem; color: #334155; font-weight: 600; margin-bottom: 20px;">
                     想要了解更多来自各届毕业家长对种子学园的真实好评与反馈吗？欢迎点击下方链接前往 Google 评价页面查看或留下您的宝贵足迹！
                 </p>
-                <a href="https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4TVRsM01qbDBjRzQYCg#sv=CAESzQEKuQEStgEKd0FKaVQ0dElwRGVTWlI0cDJuekJjMGIwMzN6MFkwRVBYRGl1Ny1rak9fb05lZ2FjY3ZTZVA0WlpYYTUzaU9SZFF3VF9EN21saU83X2g0WFc2N210bzVEY3FDdzJrSjF5S3BWbGRJdjNsSExQenpZSTRjVVZqVW44EhdYTHpWYXFUdUM5U21odmNQenZyam1BaxoiQURzcjlmUWJKV2VkMG1rcDgxY19ZTW9HbGd3a3MwdmVDdxIEODA1MRoBMyoAMAA4AUAAGAAgooHEuANKAhAB" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: linear-gradient(135deg, #0284c7, #0369a1); font-size: 15px; padding: 12px 26px;">
+                <a href="https://maps.app.goo.gl/R7pDaWCtcf1i4BW47" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: linear-gradient(135deg, #0284c7, #0369a1); font-size: 15px; padding: 12px 26px;">
                     🌐 查看更多 Google Review 真实评价
                 </a>
             </div>
@@ -246,9 +265,16 @@
         <div class="container">
             <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
             <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
+            <p style="margin-top: 16px; font-size: 12.5px; color: #cbd5e1; font-weight: 700;">🏛️ 教育部（KPM）注册幼儿园 · 注册编号 B5A0283</p>
+            <p style="margin-top: 12px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
         </div>
     </footer>
 
+
+    <!-- WhatsApp 浮动按钮 -->
+    <a href="https://wa.me/60162115349" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 咨询">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></svg>
+        <span>WhatsApp 咨询</span>
+    </a>
 </body>
 </html>

@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入学资讯 - 种子学园 Tadika Tematik Ceria</title>
+    <meta name="description" content="种子学园三步入学流程、招生对象（3-6 岁）、每周食谱、2027 学年接受 2021–2024 年出生幼儿报读；学费请 WhatsApp 索取收费表。WhatsApp 016-2115349 预约参观。">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- 社交分享预览（WhatsApp / Facebook）。上线前把 YOUR-DOMAIN.com 换成正式域名 -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="种子学园 Tadika Tematik Ceria">
+    <meta property="og:title" content="入学资讯｜种子学园 Tadika Tematik Ceria">
+    <meta property="og:description" content="种子学园三步入学流程、招生对象（3-6 岁）、每周食谱、2027 学年接受 2021–2024 年出生幼儿报读；学费请 WhatsApp 索取收费表。WhatsApp 016-2115349 预约参观。">
+    <meta property="og:url" content="https://YOUR-DOMAIN.com/admission.html">
+    <meta property="og:image" content="https://YOUR-DOMAIN.com/images/building-front-view.jpeg">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
@@ -65,6 +78,24 @@
         .info-card p { font-size: 0.95rem; color: #166534; font-weight: 600; line-height: 1.6; }
         footer { background: #0f172a; color: white; padding: 60px 0 30px; text-align: center; }
         footer p { color: #94a3b8; font-size: 0.9rem; margin-top: 12px; }
+
+        .tabs-container { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+        .tab-btn { padding: 9px 20px; border-radius: 12px; border: 1.5px solid #cbd5e1; background: #f8fafc; font-weight: 800; font-size: 14px; cursor: pointer; font-family: inherit; color: #334155; }
+        .tab-btn.active { background: #fbbf24; border-color: #f59e0b; color: #78350f; }
+        .menu-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+        @media(min-width: 640px) { .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media(min-width: 1024px) { .menu-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+        .menu-day { background: #fffbeb; border: 2px solid #fde68a; border-radius: 16px; padding: 16px; }
+        .menu-day-title { font-weight: 900; color: #92400e; font-size: 1.05rem; margin-bottom: 10px; }
+        .menu-item { font-size: 0.92rem; color: #334155; font-weight: 600; line-height: 1.55; padding: 7px 0; border-top: 1px dashed #fcd34d; }
+        .menu-item:first-of-type { border-top: none; padding-top: 0; }
+        .menu-label { display: block; font-size: 12px; font-weight: 800; color: #b45309; margin-bottom: 2px; }
+        .menu-lunch { color: #0f172a; font-weight: 700; }
+        /* WhatsApp 浮动按钮 */
+        .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 200; display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 800; font-size: 15px; padding: 12px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+        .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
+        @media(max-width: 639px) { .wa-float span { display: none; } .wa-float { padding: 14px; } footer { padding-bottom: 90px; } }
+        a.tel-link { color: inherit; text-decoration: underline; text-decoration-color: #cbd5e1; text-underline-offset: 3px; }
     </style>
 </head>
 <body>
@@ -83,7 +114,7 @@
             <nav class="desktop-nav">
                 <a href="index.html">首页</a>
                 <a href="about.html">办学特色</a>
-                <a href="curriculum.html">PBL 教学</a>
+                <a href="curriculum.html">课程与活动</a>
                 <a href="testimonials.html">家长见证</a>
                 <a href="admission.html" class="active">入学资讯</a>
             </nav>
@@ -95,7 +126,7 @@
         <div id="mobile-drawer" class="mobile-drawer">
             <a href="index.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏠 返回首页</a>
             <a href="about.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🌱 办学特色</a>
-            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 PBL 教学</a>
+            <a href="curriculum.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">📚 课程与活动</a>
             <a href="testimonials.html" onclick="document.getElementById('mobile-drawer').classList.remove('open')">💬 家长见证</a>
             <a href="admission.html" style="color: #0284c7;" onclick="document.getElementById('mobile-drawer').classList.remove('open')">🏫 入学资讯</a>
         </div>
@@ -104,75 +135,136 @@
         <div class="container">
             <div class="section-header">
                 <div class="badge">入学资讯</div>
-                <h1 class="font-cute" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a;">准备入学：六步轻松加入我们</h1>
+                <h1 class="font-cute" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: #0f172a;">准备入学：三步轻松加入我们</h1>
                 <p style="color: #64748b; font-weight: 700; margin-top: 8px;">开启一段充满爱与探索的优质童年旅程</p>
             </div>
             <div style="max-width: 900px; margin: 0 auto 30px; text-align: center;">
-                <img src="images/building-front-view.jpeg" alt="种子学园校园外观" style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 6px 20px rgba(0,0,0,0.04);" onerror="this.src='https://via.placeholder.com/900x360?text=种子学园校园外观';" />
+                <img fetchpriority="high" src="images/admission-kids-nature-book.jpg" alt="三个孩子在教室里开心地翻阅大自然绘本" style="width: 100%; max-height: 460px; object-fit: cover; object-position: center 40%; display: block; border-radius: 20px; border: 2px solid #e2e8f0; box-shadow: 0 6px 20px rgba(0,0,0,0.04);" onerror="this.style.display='none';" />
             </div>
             <div class="panel-box">
                 <h2 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">📋 入学流程</h2>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-num">1</div>
-                        <h3 class="font-cute">初步了解</h3>
-                        <p>通过种子学园官方网站、Facebook 或 Instagram 专页浏览办学理念与活动点滴。</p>
+                        <h3 class="font-cute">WhatsApp 预约</h3>
+                        <p>通过 WhatsApp 或电话联系我们，预约参观时间，也可同时索取收费表。</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">2</div>
-                        <h3 class="font-cute">预约参观时间</h3>
-                        <p>通过电话或 WhatsApp 与我们联系，预约实地参观校园的时间。</p>
+                        <h3 class="font-cute">带孩子参观</h3>
+                        <p>亲临学园看看环境、与老师交流，也让孩子先感受这里温馨友善的氛围。</p>
                     </div>
                     <div class="step-card">
                         <div class="step-num">3</div>
-                        <h3 class="font-cute">带孩子一同参观咨询</h3>
-                        <p>亲临学园实地体验环境，与老师交流，让孩子感受温馨友善的学习氛围。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">4</div>
-                        <h3 class="font-cute">报名：填妥线上表格/转账费用</h3>
-                        <p>填写线上报名表单，并按照指引完成注册与学费转账手续。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">5</div>
-                        <h3 class="font-cute">准备孩子入学物品</h3>
-                        <p>根据园方清单为孩子准备好专属的个人学习与生活日常用品。</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-num">6</div>
-                        <h3 class="font-cute">正式加入种子大家庭</h3>
-                        <p>开心迎接开学日，在爱与陪伴中开启快乐的校园新篇章！</p>
+                        <h3 class="font-cute">填表办理手续及缴费</h3>
+                        <p>填写线上报名表，并按照指引完成注册与缴费，就可以准备开学啦！</p>
                     </div>
                 </div>
             </div>
+
             <div class="panel-box" style="background: linear-gradient(135deg, #f0fdf4, #e0f2fe); border-color: #bae6fd; text-align: center;">
-                <h2 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">💬 欢迎咨询</h2>
+                <h2 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">💰 学费与收费表</h2>
                 <p style="color: #334155; font-weight: 600; font-size: 1.05rem; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    有任何疑问吗？欢迎随时与我们联系！
+                    各班学费与相关费用，请 WhatsApp 索取最新的 2027 学年收费表。我们也会为您安排实地参观时间，欢迎提出任何疑问！
                 </p>
-                <a href="https://wa.me/60162115349" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: #25D366; box-shadow: 0 4px 12px rgba(37,211,102,0.3); font-size: 16px; padding: 14px 28px;">
-                    🟢 WhatsApp 咨询：016-2115349
+                <a href="https://wa.me/60162115349?text=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E7%B4%A2%E5%8F%96%E7%A7%8D%E5%AD%90%E5%AD%A6%E5%9B%AD%202027%20%E5%AD%A6%E5%B9%B4%E6%94%B6%E8%B4%B9%E8%A1%A8%E3%80%82%E5%AD%A9%E5%AD%90%E5%87%BA%E7%94%9F%E5%B9%B4%E4%BB%BD%EF%BC%9A" target="_blank" rel="noopener noreferrer" class="btn-orange" style="background: #25D366; box-shadow: 0 4px 12px rgba(37,211,102,0.3); font-size: 16px; padding: 14px 28px;">
+                    🟢 WhatsApp 索取收费表
                 </a>
+                <p style="margin-top: 12px; font-size: 13px; color: #64748b; font-weight: 600;">或致电 <a href="tel:+60162115349" class="tel-link">016-2115349</a>（何园长）</p>
             </div>
             <div class="panel-box" style="margin-bottom: 0;">
                 <h2 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">🏫 招生对象与作息时间</h2>
                 <div class="info-grid">
                     <div class="info-card">
                         <h3 class="font-cute">👶 招生对象</h3>
-                        <p>3 岁 － 6 岁幼儿<br>（欢迎插班生咨询与加入）</p>
+                        <p>3 岁 － 6 岁幼儿<br><strong>2027 学年：接受 2021 – 2024 年出生的幼儿报读</strong><br>（欢迎插班生咨询与加入）</p>
                     </div>
                     <div class="info-card" style="background: #eff6ff; border-color: #bfdbfe;">
                         <h3 class="font-cute" style="color: #1e40af;">⏰ 服务时间</h3>
-                        <p style="color: #1e3a8a;">7.00am - 6.30pm<br>（每星期开放 5 天，公共假期休息）</p>
+                        <p style="color: #1e3a8a;">7:00am - 6:30pm<br>（每星期开放 5 天，公共假期休息）</p>
                     </div>
                     <div class="info-card" style="background: #fff7ed; border-color: #fed7aa;">
                         <h3 class="font-cute" style="color: #c2410c;">📚 上课时间</h3>
                         <p style="color: #9a3412;">
                             <strong>全日班：</strong>8:30am - 5:30pm<br>
-                            <strong>上午班：</strong>8.30am - 12.30pm
+                            <strong>上午班：</strong>8:30am - 12:30pm
                         </p>
                     </div>
                 </div>
+            </div>
+            <!-- 每周食谱 -->
+            <div class="panel-box" id="menu" style="margin-top: 30px; margin-bottom: 0;">
+                <h2 class="font-cute" style="font-size: 1.4rem; color: #0f172a; margin-bottom: 8px;">🍱 每周食谱</h2>
+                <p style="color: #475569; font-weight: 600; font-size: 0.98rem; margin-bottom: 16px;">由学园的专任厨师 Nichole Choong 为孩子准备每天的上午点心、午餐和下午点心，两套食谱轮流供应，菜色多样。</p>
+                <div class="tabs-container" role="tablist">
+                    <button type="button" class="tab-btn active" id="menu-tab-1" onclick="switchMenu(1)">食谱一</button>
+                    <button type="button" class="tab-btn" id="menu-tab-2" onclick="switchMenu(2)">食谱二</button>
+                </div>
+                <div class="menu-grid" id="menu-1">
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期一</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>蓝莓面包</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>炒饭（玉米、青葱、胡萝卜、蛋、鸡肉）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>红豆汤</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期二</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>馒头</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>米粉汤（包菜、菜心、鱼饼、鸡肉、蛋、江鱼仔汤底）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>小蛋糕</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期三</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>果酱土司</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>白饭配肉骨茶（生菜、鸡肉、豆皮、豆卜、菇）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>豆沙面包</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期四</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>甜甜圈</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>炒米粉或干面（豆干、肉碎、鱼饼、大白菜、蛋）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>海绵蛋糕</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期五</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>咖喱角</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>白饭配日式咖喱（马铃薯、胡萝卜、鸡肉）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>KAYA 土司</div>
+                    </div>
+                </div>
+                <div class="menu-grid" id="menu-2" style="display: none;">
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期一</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>草莓面包</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>意大利面（番茄、胡萝卜、肉碎、热狗）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>绿豆汤</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期二</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>法国土司</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>薏面汤（菜心、鱼饼、煎蛋、大白菜、江鱼仔汤底）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>小蛋糕</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期三</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>红豆包</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>肉碎粥（肉碎、番茄、胡萝卜）</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>牛油土司</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期四</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>甜甜圈</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>白饭配 ABC 汤（番茄、胡萝卜、鸡肉、马铃薯、洋葱）、鸡块</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>香蕉蛋糕</div>
+                    </div>
+                    <div class="menu-day">
+                        <div class="menu-day-title">星期五</div>
+                        <div class="menu-item"><span class="menu-label">上午点心</span>咖喱角</div>
+                        <div class="menu-item menu-lunch"><span class="menu-label">午餐</span>白饭配马铃薯肉碎、炒苋菜</div>
+                        <div class="menu-item"><span class="menu-label">下午点心</span>馒头</div>
+                    </div>
+                </div>
+                <p style="margin-top: 16px; font-size: 13.5px; color: #64748b; font-weight: 600;">※ 如孩子有食物过敏或饮食禁忌，请于报名时告知老师。</p>
             </div>
         </div>
     </section>
@@ -180,8 +272,24 @@
         <div class="container">
             <h3 class="font-cute" style="font-size: 1.4rem; margin-bottom: 8px;">种子学园 Tadika Tematik Ceria</h3>
             <p>培养信息化社会的开创型人才 &nbsp;|&nbsp; 孕育温馨的亲子学习文化</p>
-            <p style="margin-top: 24px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
+            <p style="margin-top: 16px; font-size: 12.5px; color: #cbd5e1; font-weight: 700;">🏛️ 教育部（KPM）注册幼儿园 · 注册编号 B5A0283</p>
+            <p style="margin-top: 12px; font-size: 11px; color: #64748b;">&copy; 2026-2027 种子学园 Tadika Tematik Ceria. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+    function switchMenu(n) {
+        [1, 2].forEach(function (k) {
+            document.getElementById('menu-' + k).style.display = (k === n) ? '' : 'none';
+            document.getElementById('menu-tab-' + k).classList.toggle('active', k === n);
+        });
+    }
+    </script>
+
+    <!-- WhatsApp 浮动按钮 -->
+    <a href="https://wa.me/60162115349" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 咨询">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></svg>
+        <span>WhatsApp 咨询</span>
+    </a>
 </body>
 </html>

@@ -37,7 +37,7 @@
         "addressCountry": "MY"
       },
       "telephone": "+60162115349",
-      "email": "hckeong@gmail.com",
+      "email": "tadikatematikceria.edu@gmail.com",
       "url": "https://YOUR-DOMAIN.com/en/",
       "sameAs": ["https://www.facebook.com/tematikceria/", "https://www.instagram.com/zhongzi_tematikceria"],
       "ageRange": "3-6 years"
@@ -95,11 +95,107 @@
         footer { background: #0f172a; color: #fff; padding: 46px 0 30px; text-align: center; }
         footer p { color: #94a3b8; font-size: 0.9rem; margin-top: 10px; }
 
+        .faq-group-title { font-size: 1.05rem; font-weight: 700; color: #92400e; margin: 22px 0 10px; }
+        .faq-item { border: 2px solid #e2e8f0; border-radius: 14px; background: #fff; margin-bottom: 10px; overflow: hidden; }
+        .faq-item summary { cursor: pointer; padding: 14px 44px 14px 18px; font-weight: 600; color: #0f172a; list-style: none; position: relative; line-height: 1.5; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.3rem; color: #0284c7; font-weight: 700; }
+        .faq-item[open] summary::after { content: "−"; }
+        .faq-item[open] summary { border-bottom: 1px dashed #e2e8f0; }
+        .faq-answer { padding: 12px 18px 16px; color: #475569; font-weight: 400; line-height: 1.75; font-size: 0.97rem; }
         /* WhatsApp 浮动按钮 */
         .wa-float { position: fixed; right: 16px; bottom: 16px; z-index: 200; display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
         .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
         @media(max-width: 639px) { .wa-float span { display: none; } .wa-float { padding: 14px; } footer { padding-bottom: 90px; } }
     </style>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which children can enrol?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Children aged 3 to 6. For the 2027 school year we accept children born 2021–2024. Mid-year entry is welcome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My child doesn't speak Mandarin. Will they cope?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many children join us with no Mandarin at all. Within a few months they understand everyday words and start to speak a little; after six months to a year some can hold simple conversations. Our Indian and Malay pupils settle in well, and many go on to Chinese primary schools (SJK(C))."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my child be ready for primary school?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Theme-based learning builds a strong foundation and an active attitude to learning. Before graduation, children also attend a two-month transition programme to prepare for Standard One."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How will I know how my child is doing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The class teacher posts weekly activity updates in the class WhatsApp group. We assess each child's development twice a year and send the report to parents, and hold one 30-minute one-to-one parent–teacher meeting every year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the drop-off and pick-up times?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Drop-off: 7:00–8:30am\nHalf-day pick-up: 12:30–1:00pm\nFull-day pick-up: 5:30–6:30pm"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide transport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Children are dropped off and picked up by their parents or family."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we have a trial day or attend an open day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We don't offer trial days or open days. Instead, please book a visit and come with your child. Our principal will personally answer all your questions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the school holidays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We follow national and Selangor public holidays, plus the Ministry of Education's additional holidays for Chinese New Year, Hari Raya Aidilfitri and Deepavali. The year-end break is two weeks, from mid-December to early January. A holiday calendar is given to parents every year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my child is sick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To protect all children, a child with an infectious illness such as hand, foot and mouth disease, chickenpox or influenza must stay home for at least 7 days before returning to school."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why don't the children wear uniforms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We value each child's individuality. Wearing their own clothes makes school feel like a big family, which helps children build relationships, learn and grow with confidence."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -230,13 +326,62 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="block" id="faq">
+        <div class="container">
+            <h2>Frequently asked questions</h2>
+            <div>
+                <details class="faq-item">
+                    <summary>Which children can enrol?</summary>
+                    <div class="faq-answer">Children aged 3 to 6. For the 2027 school year we accept children born 2021–2024. Mid-year entry is welcome.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>My child doesn't speak Mandarin. Will they cope?</summary>
+                    <div class="faq-answer">Many children join us with no Mandarin at all. Within a few months they understand everyday words and start to speak a little; after six months to a year some can hold simple conversations. Our Indian and Malay pupils settle in well, and many go on to Chinese primary schools (SJK(C)).</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Will my child be ready for primary school?</summary>
+                    <div class="faq-answer">Theme-based learning builds a strong foundation and an active attitude to learning. Before graduation, children also attend a two-month transition programme to prepare for Standard One.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>How will I know how my child is doing?</summary>
+                    <div class="faq-answer">The class teacher posts weekly activity updates in the class WhatsApp group. We assess each child's development twice a year and send the report to parents, and hold one 30-minute one-to-one parent–teacher meeting every year.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What are the drop-off and pick-up times?</summary>
+                    <div class="faq-answer">Drop-off: 7:00–8:30am<br>Half-day pick-up: 12:30–1:00pm<br>Full-day pick-up: 5:30–6:30pm</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you provide transport?</summary>
+                    <div class="faq-answer">No. Children are dropped off and picked up by their parents or family.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can we have a trial day or attend an open day?</summary>
+                    <div class="faq-answer">We don't offer trial days or open days. Instead, please book a visit and come with your child. Our principal will personally answer all your questions.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What are the school holidays?</summary>
+                    <div class="faq-answer">We follow national and Selangor public holidays, plus the Ministry of Education's additional holidays for Chinese New Year, Hari Raya Aidilfitri and Deepavali. The year-end break is two weeks, from mid-December to early January. A holiday calendar is given to parents every year.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What happens if my child is sick?</summary>
+                    <div class="faq-answer">To protect all children, a child with an infectious illness such as hand, foot and mouth disease, chickenpox or influenza must stay home for at least 7 days before returning to school.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Why don't the children wear uniforms?</summary>
+                    <div class="faq-answer">We value each child's individuality. Wearing their own clothes makes school feel like a big family, which helps children build relationships, learn and grow with confidence.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section class="block alt">
         <div class="container">
             <h2>Contact us</h2>
             <div class="card">
                 <div class="contact-line"><strong>📞 Phone</strong><a href="tel:+60162115349" class="tel-link">016-2115349</a> (Principal, Mr. Hoo) · <a href="tel:+60162115467" class="tel-link">016-2115467</a> (Vice Principal, Ms. Ng)</div>
-                <div class="contact-line"><strong>✉️ Email</strong><a href="mailto:hckeong@gmail.com" style="color: #0284c7;">hckeong@gmail.com</a></div>
+                <div class="contact-line"><strong>✉️ Email</strong><a href="mailto:tadikatematikceria.edu@gmail.com" style="color: #0284c7;">tadikatematikceria.edu@gmail.com</a></div>
                 <div class="contact-line"><strong>📍 Address</strong>No. 14, Lorong Mengkuang, Taman Gembira, 41100 Klang, Selangor (opposite Hin Hua High School)<br><a href="https://maps.app.goo.gl/R7pDaWCtcf1i4BW47" target="_blank" rel="noopener noreferrer" style="color: #ea580c; font-weight: 700;">Open in Google Maps ↗</a></div>
                 <div style="margin: 18px 0 8px;"><a href="https://wa.me/60162115349?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Tadika%20Tematik%20Ceria%20for%202027.%20My%20child%20was%20born%20in%3A%20" target="_blank" rel="noopener noreferrer" class="btn-wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></svg> WhatsApp us: 016-2115349</a></div>
                 <div class="social">

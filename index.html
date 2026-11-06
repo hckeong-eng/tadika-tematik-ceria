@@ -247,11 +247,19 @@
                         <p style="font-size: 15.5px; color: #475569; line-height: 1.7; margin-bottom: 16px;">自 1999 年创办以来深耕幼儿教育，从温馨幼苗班发展成为注重方案探究与全面素质发展的现代化幼儿园。</p>
                         
                         <!-- YouTube 视频嵌入预览 -->
+                        <div style="font-size: 14.5px; font-weight: 900; color: #0369a1; margin-bottom: 8px; line-height: 1.5;">🎬 种子学园25周年：爱的成长旅程与校友深情祝福</div>
                         <div style="margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 2px solid #bae6fd; background: #000; aspect-ratio: 16 / 9;">
-                            <button type="button" class="yt-facade" onclick="playYT(this)" aria-label="播放种子学园介绍视频">
-                                <img loading="lazy" src="https://i.ytimg.com/vi/C8eGusx8Ra0/hqdefault.jpg" alt="种子学园介绍视频封面" onerror="this.style.display='none';" />
+                            <button type="button" class="yt-facade" onclick="playYT(this)" aria-label="播放视频：种子学园25周年，爱的成长旅程与校友深情祝福">
+                                <img loading="lazy" src="https://i.ytimg.com/vi/C8eGusx8Ra0/hqdefault.jpg" alt="种子学园25周年校友祝福视频封面" onerror="this.style.display='none';" />
                                 <span class="yt-play" aria-hidden="true"></span>
                             </button>
+                        </div>
+
+                        <!-- 校友与园歌说明 -->
+                        <div style="background: #f0fdf4; border: 2px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; margin-bottom: 14px;">
+                            <div style="font-size: 15px; font-weight: 900; color: #166534; margin-bottom: 6px;">🌳 从种子到森林，二十多年的家</div>
+                            <p style="font-size: 14px; color: #334155; line-height: 1.7; margin: 0;">二十多年来，一颗颗小种子在这里发芽，长大成人、成家立业，有的又牵着自己的孩子回来。无论外面风大雨大，想起这片森林，心中就有力量。</p>
+                            <p style="font-size: 12.5px; color: #64748b; margin: 6px 0 0; text-align: right;">——取材自种子园歌《森林是我家》</p>
                         </div>
 
                        <!-- 电子书翻阅预览区块 -->
@@ -260,8 +268,8 @@
                             <a href="https://online.fliphtml5.com/ykvoa/mivs/#p=1" target="_blank" rel="noopener noreferrer" style="display: inline-block; font-size: 13.5px; font-weight: 800; color: white; background: #f59e0b; padding: 7px 14px; border-radius: 99px; text-decoration: none; box-shadow: 0 3px 10px rgba(245,158,11,0.3); margin-bottom: 8px;">
                                 点击全屏翻阅电子书 ↗
                             </a>
-                            <p style="font-size: 13px; color: #78350f; line-height: 1.5; margin: 0; text-align: left;">
-                                翻阅《种子学园二十五年：爱的成长旅程》电子书，一同回顾学园自1999年创办以来的温情足迹。这里记录了孩子们在开放式主题教学与大自然怀抱中的快乐探索，见证了一颗颗小种子如何破土发芽、茁壮成长。
+                            <p style="font-size: 13px; color: #78350f; line-height: 1.6; margin: 0; text-align: center;">
+                                《种子学园二十五年：爱的成长旅程》，收录学园自 1999 年以来的点滴故事，以及孩子们的成长足迹。
                             </p>
                         </div>
                     </div>
@@ -398,7 +406,7 @@
     function playYT(btn) {
         var f = document.createElement('iframe');
         f.src = 'https://www.youtube-nocookie.com/embed/C8eGusx8Ra0?autoplay=1&rel=0';
-        f.title = '种子学园介绍视频';
+        f.title = '种子学园25周年：爱的成长旅程与校友深情祝福';
         f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         f.allowFullscreen = true;
         f.style.cssText = 'width:100%;height:100%;border:0;display:block;';

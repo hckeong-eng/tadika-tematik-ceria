@@ -1,0 +1,13 @@
+// Cloudflare Workers 设定文件（种子学园网站）
+// name 必须和 Cloudflare 后台的项目名称完全一样，否则会部署成另一个新项目
+{
+  "name": "tadika-tematik-ceria",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./",
+    // 找不到页面时，显示我们做的 404.html
+    "not_found_handling": "404-page",
+    // 保持现有的网址格式（例如 /about）
+    "html_handling": "auto-trailing-slash"
+  }
+}
